@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jonathan Le — Senior Supplier Quality Engineer</title>
+<meta name="description" content="Jonathan Le — Senior Supplier Quality Engineer in medical devices. Bilingual English & Vietnamese. ISO 13485, 21 CFR 820, supplier audits, PPAP, process validation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#e9ede1;
+    --bg-2:#eef2e8;
+    --paper:#fbfcf8;
+    --sage:#8ba277;
+    --sage-deep:#5f7350;
+    --sage-darker:#46563a;
+    --forest:#313c28;
+    --ink:#2a3122;
+    --muted:#6e7762;
+    --line:#d3dac8;
+    --line-soft:#e2e7d9;
+    --honey:#b9913f;
+    --shadow:0 1px 2px rgba(49,60,40,.04), 0 8px 30px rgba(49,60,40,.06);
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- monospace label / eyebrow ---------- */
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--sage-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:.7em;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px;height:1px;background:var(--sage);
+    display:inline-block;
+  }
+
+  /* ---------- caliper rule ---------- */
+  .rule{
+    height:9px;
+    border-top:1px solid var(--line);
+    background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 44px);
+    background-position:top left;
+    background-repeat:repeat-x;
+    background-size:44px 6px;
+    margin:0;
+  }
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(233,237,225,.82);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;gap:18px;height:62px}
+  .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.01em;font-size:1.02rem;color:var(--forest);text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:auto}
+  .monogram{
+    width:30px;height:30px;border-radius:8px;
+    background:var(--sage-deep);color:#fff;
+    display:grid;place-items:center;
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.04em;font-weight:600;
+  }
+  .nav-links{display:flex;gap:4px}
+  .nav-links a{
+    font-size:.82rem;text-decoration:none;color:var(--muted);
+    padding:8px 11px;border-radius:8px;font-weight:500;
+    transition:color .18s,background .18s;
+  }
+  .nav-links a:hover{color:var(--forest);background:rgba(139,162,119,.16)}
+  .btn{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:.82rem;
+    text-decoration:none;cursor:pointer;border:none;
+    padding:9px 16px;border-radius:9px;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s,background .18s,box-shadow .18s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--sage-deep);color:#fdfdfb;box-shadow:var(--shadow)}
+  .btn-primary:hover{background:var(--sage-darker);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--forest);border:1px solid var(--line)}
+  .btn-ghost:hover{background:var(--paper);border-color:var(--sage)}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 9px;cursor:pointer}
+  .nav-toggle span{display:block;width:18px;height:2px;background:var(--forest);margin:3px 0;border-radius:2px}
+
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute;top:62px;left:0;right:0;
+      flex-direction:column;gap:2px;
+      background:var(--bg-2);border-bottom:1px solid var(--line);
+      padding:10px 18px 16px;display:none;
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:11px 8px;font-size:.92rem}
+    .nav-toggle{display:block}
+    .nav .btn-primary{padding:8px 13px}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:74px 0 30px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:52px;align-items:center}
+  .hero h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;letter-spacing:-.025em;line-height:1.02;
+    font-size:clamp(2.6rem,6vw,4.4rem);
+    color:var(--forest);margin:.5rem 0 0;
+  }
+  .hero .role{
+    font-family:'IBM Plex Mono',monospace;font-size:.86rem;letter-spacing:.04em;
+    color:var(--sage-deep);margin-top:18px;font-weight:500;
+  }
+  .hero .thesis{
+    font-size:1.18rem;color:var(--ink);max-width:46ch;margin:20px 0 30px;
+    line-height:1.55;
+  }
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+  .portrait{
+    position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;
+    background:linear-gradient(150deg,#cfd9c0,#aebd97);
+    border:1px solid var(--line);box-shadow:var(--shadow);
+  }
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .portrait .ph-label{
+    position:absolute;inset:0;display:grid;place-items:center;text-align:center;
+    font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;
+    color:var(--sage-darker);text-transform:uppercase;padding:20px;
+  }
+
+  /* readouts */
+  .readouts{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    margin-top:46px;border:1px solid var(--line);border-radius:12px;
+    background:var(--paper);overflow:hidden;
+  }
+  .readout{padding:20px 22px;border-right:1px solid var(--line-soft)}
+  .readout:last-child{border-right:none}
+  .readout .num{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
+    font-size:1.9rem;color:var(--sage-deep);letter-spacing:-.02em;line-height:1;
+  }
+  .readout .cap{
+    font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;
+    color:var(--muted);text-transform:uppercase;margin-top:9px;line-height:1.4;
+  }
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .portrait{max-width:300px}
+    .readouts{grid-template-columns:repeat(2,1fr)}
+    .readout:nth-child(2){border-right:none}
+    .readout:nth-child(1),.readout:nth-child(2){border-bottom:1px solid var(--line-soft)}
+  }
+  @media (max-width:460px){
+    .readouts{grid-template-columns:1fr}
+    .readout{border-right:none;border-bottom:1px solid var(--line-soft)}
+    .readout:last-child{border-bottom:none}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0}
+  .section-head{margin-bottom:36px;max-width:60ch}
+  .section-head h2{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:600;
+    font-size:clamp(1.7rem,3.4vw,2.3rem);letter-spacing:-.02em;
+    color:var(--forest);margin:14px 0 0;line-height:1.1;
+  }
+  .section-head p{color:var(--muted);margin:14px 0 0;font-size:1.02rem}
+
+  .about-body{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .about-body p{font-size:1.06rem;margin:0 0 18px;color:var(--ink)}
+  .about-body p:last-child{margin-bottom:0}
+  @media (max-width:760px){.about-body{grid-template-columns:1fr;gap:0}}
+
+  /* ---------- experience accordion ---------- */
+  .timeline{border-top:1px solid var(--line)}
+  .role{border-bottom:1px solid var(--line)}
+  .role-head{
+    width:100%;background:none;border:none;cursor:pointer;text-align:left;
+    display:grid;grid-template-columns:130px 1fr auto;gap:22px;align-items:baseline;
+    padding:24px 6px;font-family:inherit;color:inherit;
+    transition:background .16s;
+  }
+  .role-head:hover{background:rgba(139,162,119,.08)}
+  .role-head:focus-visible{outline:2px solid var(--sage-deep);outline-offset:-2px;border-radius:8px}
+  .role-date{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--muted);letter-spacing:.02em;padding-top:4px}
+  .role-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.16rem;color:var(--forest);letter-spacing:-.01em}
+  .role-org{font-size:.92rem;color:var(--sage-deep);margin-top:3px;font-weight:500}
+  .role-toggle{
+    width:30px;height:30px;border-radius:50%;border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--sage-deep);flex-shrink:0;
+    transition:transform .25s,background .18s,border-color .18s;
+    font-size:1.1rem;line-height:1;align-self:center;
+  }
+  .role[open-state] .role-toggle,.role.open .role-toggle{transform:rotate(45deg);background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+  .role-body{
+    max-height:0;overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .role.open .role-body{max-height:760px}
+  .role-body-inner{padding:0 6px 28px;display:grid;grid-template-columns:130px 1fr;gap:22px}
+  .role-summary{font-size:.98rem;color:var(--ink);margin:0 0 14px}
+  ul.bullets{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+  ul.bullets li{position:relative;padding-left:20px;font-size:.96rem;color:var(--ink)}
+  ul.bullets li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:7px;height:7px;border:1.5px solid var(--sage);border-radius:2px;transform:rotate(45deg);
+  }
+  .role-spacer{}
+  @media (max-width:680px){
+    .role-head{grid-template-columns:1fr auto;gap:10px}
+    .role-date{grid-column:1 / -1;padding-top:0}
+    .role-body-inner{grid-template-columns:1fr;gap:0}
+    .role-spacer{display:none}
+  }
+
+  /* ---------- recognition ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .filter{
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--paper);border:1px solid var(--line);color:var(--muted);
+    padding:8px 14px;border-radius:20px;cursor:pointer;transition:all .16s;
+  }
+  .filter:hover{border-color:var(--sage)}
+  .filter.active{background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:880px){.rec-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.rec-grid{grid-template-columns:1fr}}
+  .rec{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;
+    transition:transform .2s,box-shadow .2s,border-color .2s;
+  }
+  .rec:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sage)}
+  .rec .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--honey);display:inline-flex;align-items:center;gap:6px;font-weight:600;
+  }
+  .rec .tag::before{content:"★";font-size:.7rem}
+  .rec blockquote{margin:0;font-size:.96rem;color:var(--ink);line-height:1.55;flex:1}
+  .rec .who{
+    border-top:1px solid var(--line-soft);padding-top:12px;
+    font-size:.8rem;color:var(--sage-deep);font-weight:600;
+  }
+  .rec .who span{display:block;color:var(--muted);font-weight:400;font-size:.74rem;margin-top:2px}
+
+  /* ---------- education / skills ---------- */
+  .two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
+  @media (max-width:820px){.two-col{grid-template-columns:1fr;gap:40px}}
+  .edu-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;margin-bottom:16px;
+  }
+  .edu-card h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.12rem;color:var(--forest);margin:0}
+  .edu-card .sub{font-size:.92rem;color:var(--sage-deep);margin:4px 0 0;font-weight:500}
+  .edu-card .when{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--muted);margin-top:8px;letter-spacing:.02em}
+  .edu-detail{margin-top:14px;font-size:.92rem;color:var(--ink)}
+  .edu-detail .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .mini-chip{font-family:'IBM Plex Mono',monospace;font-size:.68rem;background:rgba(139,162,119,.16);color:var(--sage-darker);padding:5px 10px;border-radius:6px;letter-spacing:.02em}
+
+  .skill-group{margin-bottom:22px}
+  .skill-group h4{
+    font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 11px;font-weight:500;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{
+    background:var(--paper);border:1px solid var(--line);border-radius:8px;
+    padding:7px 12px;font-size:.84rem;color:var(--ink);
+  }
+
+  /* ---------- volunteering ---------- */
+  .vol-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+  @media (max-width:760px){.vol-grid{grid-template-columns:1fr}}
+  .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .photo{
+    position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;
+    background:linear-gradient(150deg,#d3ddc5,#b3c29c);border:1px solid var(--line);
+  }
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .photo .ph-label{
+    position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;
+    font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.1em;
+    color:var(--sage-darker);text-transform:uppercase;
+  }
+  .vol-text p{font-size:1.02rem;color:var(--ink);margin:0 0 16px}
+
+  /* ---------- vietnam ---------- */
+  #vietnam{background:linear-gradient(180deg,var(--bg-2),#e4ead9);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .vn-head{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+  .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper)}
+  .lang-toggle button{
+    font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;
+    border:none;background:none;cursor:pointer;padding:9px 18px;color:var(--muted);transition:all .16s;
+  }
+  .lang-toggle button.active{background:var(--sage-deep);color:#fff}
+  .vn-body{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  @media (max-width:820px){.vn-body{grid-template-columns:1fr;gap:34px}}
+  .vn-narrative p{font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 18px}
+  .vn-narrative [data-lang]{display:none}
+  .vn-narrative [data-lang].show{display:block}
+  .vn-callout{
+    margin-top:8px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--sage);
+    border-radius:10px;padding:18px 20px;font-size:.95rem;color:var(--ink);
+  }
+  .vn-callout .k{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);display:block;margin-bottom:7px}
+  .vn-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .vn-gallery .photo:first-child{grid-column:1 / -1;aspect-ratio:16/9}
+
+  /* ---------- contact / footer ---------- */
+  footer{background:var(--forest);color:#dfe6d4;padding:60px 0 40px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  footer h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.6rem,3vw,2.1rem);color:#fff;margin:0 0 10px;letter-spacing:-.02em}
+  footer p{color:#b9c6aa;margin:0;max-width:38ch}
+  .foot-links{display:flex;flex-direction:column;gap:12px}
+  .foot-links a{
+    color:#dfe6d4;text-decoration:none;font-size:.95rem;display:inline-flex;align-items:center;gap:10px;
+    transition:color .16s;
+  }
+  .foot-links a:hover{color:#fff}
+  .foot-links .lbl{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.1em;color:#8ba277;text-transform:uppercase;width:64px}
+  .foot-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#8a9678;letter-spacing:.04em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .role-body,.role-toggle,.rec,.btn,.portrait{transition:none}
+  }
+  :focus-visible{outline:2px solid var(--sage-deep);outline-offset:2px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="monogram">JL</span> Jonathan Le</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#education">Education</a>
+      <a href="#volunteering">Community</a>
+      <a href="#vietnam">Việt Nam</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="btn btn-primary" href="Jonathan_Le_Resume.pdf" download>Download résumé</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Senior Supplier Quality Engineer · Medical Devices</span>
+        <h1>Quality you can<br>stake a life on.</h1>
+        <p class="role">Minneapolis, MN · Bilingual English &amp; Vietnamese · Open to roles in Vietnam</p>
+        <p class="thesis">Eight years making sure the parts inside medical devices meet the standard a patient deserves — driven by where my family came from, disciplined by where the work demands I go.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#experience">See the work</a>
+          <a class="btn btn-ghost" href="#vietnam">Read my story</a>
+        </div>
+      </div>
+      <div class="portrait reveal">
+        <img src="images/portrait.jpg" alt="Jonathan Le" onerror="this.remove()">
+        <div class="ph-label">images/portrait.jpg<br>— add a portrait photo —</div>
+      </div>
+    </div>
+
+    <div class="readouts reveal">
+      <div class="readout"><div class="num" data-count="8" data-suffix="+">8+</div><div class="cap">Years in regulated<br>medical-device quality</div></div>
+      <div class="readout"><div class="num">0</div><div class="cap">Findings on a major<br>external certification audit</div></div>
+      <div class="readout"><div class="num" data-count="65" data-suffix="+">65+</div><div class="cap">Product GTINs released<br>to global markets</div></div>
+      <div class="readout"><div class="num">EN·VN</div><div class="cap">Fluent — bilingual<br>&amp; bicultural</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>An engineer's precision, an immigrant's drive.</h2>
+    </div>
+    <div class="about-body reveal">
+      <div>
+        <p>I'm a Senior Supplier Quality Engineer in medical devices, where the products end up inside someone's body — so "good enough" means whether a device performs safely for a real patient. That bar shapes how I work.</p>
+        <p>I've sat on both sides of the table: as a manufacturing engineer making the parts, and as the quality engineer holding suppliers accountable for them. That makes me practical about what's actually achievable on a production floor, and stubborn about the things that can't be compromised.</p>
+      </div>
+      <div>
+        <p>My approach comes with a hustle I come by honestly — a get-it-done energy rooted in my family's story. But my field rewards the opposite instinct too: patience, precision, and the discipline to slow down and get it exactly right. Learning to hold both at once is the most useful thing I've figured out.</p>
+        <p>I read, write, and speak both English and Vietnamese fluently, and my heritage shapes how I build trust across cultures and teams. As more medical-device and electronics manufacturing scales across the US and Asia-Pacific, that bridge keeps proving useful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>A climb through quality &amp; manufacturing.</h2>
+      <p>Tap any role to expand. Internal program and supplier names have been generalized.</p>
+    </div>
+
+    <div class="timeline reveal">
+
+      <div class="role">
+        <button class="role-head" aria-expanded="false">
+          <span class="role-date">2025 — Present</span>
+          <span><span class="role-title">Senior Supplier Quality Engineer</span><span class="role-org">Medtronic · Cardiac Ablation Solutions</span></span>
+          <span class="role-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="role-body">
+          <div class="role-body-inner">
+            <div class="role-spacer"></div>
+            <div>
+              <p class="role-summary">Lead supplier quality and compliance for medical-device production under FDA 21 CFR Part 820 and ISO 13485.</p>
+              <ul class="bullets">
+                <li>Lead supplier quality across multiple suppliers and contract manufacturers, ensuring sustained regulatory compliance.</li>
+                <li>Led the supplier-quality response to a critical foreign-material investigation — driving corrective actions, partnering directly with suppliers, and supporting on-site lab work; recognized at the VP level and helped lift a finished-good hold to enable timely shipment.</li>
+                <li>Drove the operating unit's first full product through PPAP, establishing tight supplier controls while managing a contract manufacturer through significant challenges.</li>
+                <li>Lead daily process-validation (OQ/PQ) meetings with a contract manufacturer, coaching the supplier toward faster, higher-quality results.</li>
+                <li>Caught and corrected an error in a tolerance-interval analysis during PPAP review using applied statistics, then documented the learnings as reusable guidance for the team.</li>
+                <li>Closed high-priority supplier change orders in record turnaround to clear backorders and protect shipment schedules.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" aria-expanded="false">
+          <span class="role-date">2022 — 2025</span>
+          <span><span class="role-title">Supplier Quality Engineer</span><span class="role-org">Medtronic</span></span>
+          <span class="role-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="role-body">
+          <div class="role-body-inner">
+            <div class="role-spacer"></div>
+            <div>
+              <p class="role-summary">Owned supplier quality for the components and materials feeding medical-device production.</p>
+              <ul class="bullets">
+                <li>Served as supplier quality engineer on a ~2-year manufacturing transfer, closing all PPAP deliverables and passing the external certification audit with zero findings — a seamless transfer by company standards.</li>
+                <li>Helped design a transfer strategy that avoided an estimated ~$500K in projected costs by using a business-process approach instead of a costly IT build; supported a cross-functional Kaizen and risk-based gap closure.</li>
+                <li>Supported a global regulatory launch, helping release 65+ product GTINs through implementation and a legal manufacturing change — coordinating across time zones with an overseas contract manufacturer.</li>
+                <li>Devised a creative overpackaging solution that prevented shipping damage while avoiding expensive verification testing and new part numbers.</li>
+                <li>Traveled on-site to international contract manufacturers, often on short notice, to support builds, supplier readiness, and design-verification closure.</li>
+                <li>Created supplier management-of-change questionnaire forms adopted across the team; mentored colleagues on inspection methods.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" aria-expanded="false">
+          <span class="role-date">2021 — 2022</span>
+          <span><span class="role-title">Quality Engineer — Verification &amp; Validation</span><span class="role-org">Medtronic · Contract</span></span>
+          <span class="role-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="role-body">
+          <div class="role-body-inner">
+            <div class="role-spacer"></div>
+            <div>
+              <p class="role-summary">Hands-on quality engineering in a regulated V&amp;V environment.</p>
+              <ul class="bullets">
+                <li>Conducted failure analysis on returned neuro-implantable products and developed test methods to validate the analysis procedures.</li>
+                <li>Executed software installation, verification, and equipment validation for compliant introduction to technicians.</li>
+                <li>Built and executed qualification protocols and work instructions; validated quality instruments for attribute and variable characteristics of implantable devices.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" aria-expanded="false">
+          <span class="role-date">2018 — 2020</span>
+          <span><span class="role-title">Manufacturing Engineer · Engineer Technician IV</span><span class="role-org">Merit Medical Systems, Inc.</span></span>
+          <span class="role-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="role-body">
+          <div class="role-body-inner">
+            <div class="role-spacer"></div>
+            <div>
+              <p class="role-summary">Learned quality from the build side — making the parts, not just auditing them.</p>
+              <ul class="bullets">
+                <li>Generated and executed IQ/OQ/PQ for new equipment and processes per 21 CFR Part 820 and ISO 13485.</li>
+                <li>Designed production-aid devices and fixtures that reduced scrap and increased line productivity.</li>
+                <li>Operated extruders and analyzed resin moisture to maintain material quality; held tight tolerances in precision cutting.</li>
+                <li>Generated and routed Engineering Change Notifications (ECNs) for controlled documentation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" aria-expanded="false">
+          <span class="role-date">2013 — 2018</span>
+          <span><span class="role-title">Earlier — Welding, Fabrication &amp; STEM Mentoring</span><span class="role-org">Foundations: craftsmanship, communication, leadership</span></span>
+          <span class="role-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="role-body">
+          <div class="role-body-inner">
+            <div class="role-spacer"></div>
+            <div>
+              <p class="role-summary">The work that built the character behind the engineering.</p>
+              <ul class="bullets">
+                <li><strong>Welder &amp; fabrication:</strong> operated welding and grinding equipment safely and precisely; coordinated with vendors and metal suppliers to reduce lead time — first exposure to the supplier relationships I now manage.</li>
+                <li><strong>STEM mentoring &amp; tutoring:</strong> led individualized sessions that improved student test scores by an average of 60%, building the patience, listening, and clear-communication skills behind every good supplier conversation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ============ RECOGNITION ============ -->
+<section id="recognition">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Recognition</span>
+      <h2>What colleagues and leaders have said.</h2>
+      <p>A selection from internal recognition I've received — from peers to the VP of Quality. Filter by theme.</p>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <button class="filter active" data-cat="all">All</button>
+      <button class="filter" data-cat="results">Results &amp; Quality</button>
+      <button class="filter" data-cat="leadership">Leadership</button>
+      <button class="filter" data-cat="technical">Technical Depth</button>
+      <button class="filter" data-cat="culture">Cross-Cultural</button>
+    </div>
+
+    <div class="rec-grid reveal" id="recGrid">
+
+      <article class="rec" data-cat="leadership results">
+        <span class="tag">Leadership</span>
+        <blockquote>"Exceptional collaboration and leadership in resolving a critical quality issue. Your efforts exemplify teamwork, innovation, and commitment to quality — going above and beyond to safeguard patient outcomes."</blockquote>
+        <div class="who">VP, Quality<span>Cardiac Ablation Solutions</span></div>
+      </article>
+
+      <article class="rec" data-cat="results">
+        <span class="tag">Results</span>
+        <blockquote>"Drove toward the best quality outcomes while meeting business commitments — a creative approach that reduced risk and avoided an estimated $500K in project costs."</blockquote>
+        <div class="who">Director, Quality Program Management</div>
+      </article>
+
+      <article class="rec" data-cat="results">
+        <span class="tag">Results</span>
+        <blockquote>"An external certification audit concluded with no findings. Great audit results don't happen by accident — they're the result of the rigor put into the documentation early in the program."</blockquote>
+        <div class="who">Senior Manager, Supplier Quality</div>
+      </article>
+
+      <article class="rec" data-cat="culture">
+        <span class="tag">Cross-Cultural</span>
+        <blockquote>"Thank you for leading our team session sharing your travel experience in Vietnam and cross-cultural differences. There was great interaction from the audience, and you set a high bar for the quality of the material."</blockquote>
+        <div class="who">Senior Manager</div>
+      </article>
+
+      <article class="rec" data-cat="technical">
+        <span class="tag">Technical Depth</span>
+        <blockquote>"Identified an error in a tolerance-interval analysis during review, demonstrated deep understanding of statistics and data transformation, and wrote up clear lessons for the whole team to apply to future projects."</blockquote>
+        <div class="who">Quality Engineer (peer)</div>
+      </article>
+
+      <article class="rec" data-cat="leadership">
+        <span class="tag">Leadership</span>
+        <blockquote>"Your leadership in the daily process-validation meetings kept the team accountable with an open line of communication — delivering faster results and teaching the supplier better ways of working."</blockquote>
+        <div class="who">Senior Engineering Manager</div>
+      </article>
+
+      <article class="rec" data-cat="results">
+        <span class="tag">Results</span>
+        <blockquote>"An amazing accomplishment getting the first full product under PPAP across the finish line — navigating new processes and putting tight supplier controls in place for the benefit of patients."</blockquote>
+        <div class="who">Program Director</div>
+      </article>
+
+      <article class="rec" data-cat="results leadership">
+        <span class="tag">Results</span>
+        <blockquote>"Closed process validations with flexibility, creativity, and intelligent risk-taking — always with compliance and patient safety in mind — by engaging and coaching the supplier team. A major milestone that paved the way for a smooth launch."</blockquote>
+        <div class="who">Senior Manager, Supplier Quality</div>
+      </article>
+
+      <article class="rec" data-cat="results">
+        <span class="tag">Results</span>
+        <blockquote>"Attention to detail, commitment to accuracy, and a collaborative spirit were instrumental in a successful external audit — a direct reflection of excellence and teamwork."</blockquote>
+        <div class="who">Director, Quality Systems</div>
+      </article>
+
+      <article class="rec" data-cat="technical">
+        <span class="tag">Technical Depth</span>
+        <blockquote>"A thorough on-site assessment identified multiple improvements that will be made across the packaging line — a critical deliverable for our root-cause analysis."</blockquote>
+        <div class="who">Senior Engineering Manager, Operations</div>
+      </article>
+
+      <article class="rec" data-cat="leadership">
+        <span class="tag">Mentorship</span>
+        <blockquote>"Thank you for your patience walking me through your analysis. Your expertise helped me understand how to do the task more efficiently."</blockquote>
+        <div class="who">Quality Engineering Manager</div>
+      </article>
+
+      <article class="rec" data-cat="results">
+        <span class="tag">Results</span>
+        <blockquote>"A creative overpackaging solution allowed simple implementation without expensive verification testing or new part numbers — saving time and resources while preventing shipping damage."</blockquote>
+        <div class="who">Senior Program Manager</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION & SKILLS ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Education &amp; Capabilities</span>
+      <h2>The foundation, and the toolkit.</h2>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <div class="edu-card">
+          <h3>University of Houston</h3>
+          <p class="sub">B.S. — Mechanical Engineering</p>
+          <p class="when">2012 — 2016 · GPA 3.38</p>
+          <div class="edu-detail">
+            Focused on design, materials, and manufacturing. Completed a senior design project building a working thermal-therapy medical-device prototype, and passed the Fundamentals of Engineering (FE) exam.
+            <div class="chips">
+              <span class="mini-chip">FE exam — passed</span>
+              <span class="mini-chip">Pi Tau Sigma (ME honor society)</span>
+              <span class="mini-chip">ASME — Event Committee Lead</span>
+              <span class="mini-chip">Vietnamese Student Association</span>
+              <span class="mini-chip">Hallyu Club — President</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <h3>Engineer-in-Training (EIT)</h3>
+          <p class="sub">Texas Board of Professional Engineers</p>
+          <p class="when">Issued 2017</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="skill-group">
+          <h4>Quality &amp; Compliance</h4>
+          <div class="chips">
+            <span class="chip">Supplier Quality</span><span class="chip">ISO 13485</span><span class="chip">21 CFR Part 820</span><span class="chip">QMS</span><span class="chip">CAPA</span><span class="chip">Non-Conformance (SCR/SCC)</span><span class="chip">Design Controls</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Supplier &amp; Process</h4>
+          <div class="chips">
+            <span class="chip">Supplier Audits</span><span class="chip">PPAP</span><span class="chip">First Article Inspection</span><span class="chip">Supplier Development</span><span class="chip">Manufacturing Transfer</span><span class="chip">Management of Change</span><span class="chip">Contract Mfg. Management</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Validation &amp; Technical</h4>
+          <div class="chips">
+            <span class="chip">IQ / OQ / PQ</span><span class="chip">Verification &amp; Validation</span><span class="chip">Test Method Validation</span><span class="chip">Design Verification</span><span class="chip">Failure Analysis</span><span class="chip">Root Cause Analysis</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Methods &amp; Analytics</h4>
+          <div class="chips">
+            <span class="chip">Applied Statistics</span><span class="chip">Tolerance Interval Analysis</span><span class="chip">Six Sigma</span><span class="chip">FMEA</span><span class="chip">8D</span><span class="chip">Kaizen</span><span class="chip">GD&amp;T</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Bridge</h4>
+          <div class="chips">
+            <span class="chip">Bilingual EN / VN</span><span class="chip">Cross-Cultural Communication</span><span class="chip">Global Supplier Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ============ COMMUNITY ============ -->
+<section id="volunteering">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Community</span>
+      <h2>Showing up beyond the job.</h2>
+    </div>
+    <div class="vol-grid reveal">
+      <div class="vol-text">
+        <p>For two years running, I represented my company at a regional Chamber of Commerce career-connect day — coordinating demos, running the booth, and talking with high-schoolers about what engineering in medical devices actually looks like.</p>
+        <p>It connects back to where I started: years of one-on-one STEM mentoring and tutoring. Helping someone see that a technical career is within reach is its own kind of quality work.</p>
+      </div>
+      <div class="photo-row">
+        <div class="photo"><img src="images/community-1.jpg" alt="Community outreach" onerror="this.remove()"><div class="ph-label">images/community-1.jpg</div></div>
+        <div class="photo"><img src="images/community-2.jpg" alt="Community outreach" onerror="this.remove()"><div class="ph-label">images/community-2.jpg</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIETNAM ============ -->
+<section id="vietnam">
+  <div class="wrap">
+    <div class="vn-head reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <span class="eyebrow">Heritage · Việt Nam</span>
+        <h2>Where it started — and where I'm headed.</h2>
+      </div>
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
+        <button class="active" data-lang="en">EN</button>
+        <button data-lang="vi">VN</button>
+      </div>
+    </div>
+
+    <div class="vn-body reveal">
+      <div class="vn-narrative">
+        <div data-lang="en" class="show">
+          <p>My parents left Vietnam so their children could build a different life. That sacrifice is the engine behind how I work — a drive to make it mean something, balanced by the patience and care my field demands.</p>
+          <p>I bring my culture into everything I do. And one day, I hope to bring everything I've built back home — to help others achieve great things in the place my family once had to leave.</p>
+        </div>
+        <div data-lang="vi">
+          <p>Ba mẹ tôi rời Việt Nam để các con có một cuộc đời khác. Sự hy sinh ấy là động lực cho cách tôi làm việc — một khát vọng để điều đó trở nên có ý nghĩa, cân bằng với sự kiên nhẫn và cẩn trọng mà nghề của tôi đòi hỏi.</p>
+          <p>Tôi mang văn hóa của mình vào mọi việc tôi làm. Và một ngày nào đó, tôi mong được mang tất cả những gì mình gây dựng trở về quê hương — để giúp những người khác làm nên những điều lớn lao ngay tại nơi gia đình tôi từng phải rời xa.</p>
+        </div>
+        <div class="vn-callout">
+          <span class="k">Recognized at work</span>
+          I led a culture session for my team, sharing my travels in Vietnam and the cross-cultural differences that shape how global teams work together — formally recognized by my manager for the engagement it sparked.
+        </div>
+      </div>
+      <div class="vn-gallery">
+        <div class="photo"><img src="images/vietnam-1.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-1.jpg — feature photo</div></div>
+        <div class="photo"><img src="images/vietnam-2.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-2.jpg</div></div>
+        <div class="photo"><img src="images/vietnam-3.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-3.jpg</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Let's talk.</h2>
+        <p>Open to supplier-quality and manufacturing-quality roles in the US and with multinationals in Vietnam. In English or Vietnamese — either works.</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/jonathanle1227/" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span> /in/jonathanle1227</a>
+        <a href="mailto:your.email@example.com"><span class="lbl">Email</span> your.email@example.com</a>
+        <a href="Jonathan_Le_Resume.pdf" download><span class="lbl">Résumé</span> Download PDF</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Jonathan Le · Minneapolis, MN</span>
+      <span>Built &amp; hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile nav
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+  });
+
+  // accordion
+  document.querySelectorAll('.role-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var role = btn.closest('.role');
+      var open = role.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // recognition filter
+  var filters = document.getElementById('filters');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#recGrid .rec'));
+  filters.addEventListener('click', function(e){
+    var b = e.target.closest('.filter'); if(!b) return;
+    filters.querySelectorAll('.filter').forEach(function(f){f.classList.remove('active')});
+    b.classList.add('active');
+    var cat = b.getAttribute('data-cat');
+    cards.forEach(function(card){
+      var show = cat === 'all' || card.getAttribute('data-cat').indexOf(cat) > -1;
+      card.style.display = show ? '' : 'none';
+    });
+  });
+
+  // language toggle
+  var langToggle = document.getElementById('langToggle');
+  langToggle.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    var lang = b.getAttribute('data-lang');
+    langToggle.querySelectorAll('button').forEach(function(x){x.classList.toggle('active', x===b)});
+    document.querySelectorAll('.vn-narrative [data-lang]').forEach(function(block){
+      block.classList.toggle('show', block.getAttribute('data-lang')===lang);
+    });
+  });
+
+  // reveal on scroll
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(r){r.classList.add('in')});
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+    }, {threshold:.12});
+    reveals.forEach(function(r){io.observe(r)});
+
+    // count-up readouts
+    document.querySelectorAll('.num[data-count]').forEach(function(el){
+      var target = +el.getAttribute('data-count');
+      var suffix = el.getAttribute('data-suffix') || '';
+      var cio = new IntersectionObserver(function(ents){
+        ents.forEach(function(en){
+          if(!en.isIntersecting) return;
+          cio.unobserve(el);
+          var start=0, dur=900, t0=performance.now();
+          function step(now){
+            var p=Math.min((now-t0)/dur,1);
+            var val=Math.round((0.5-Math.cos(p*Math.PI)/2)*target);
+            el.textContent=val+suffix;
+            if(p<1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.5});
+      cio.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
