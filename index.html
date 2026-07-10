@@ -146,9 +146,9 @@
     background:linear-gradient(150deg,#cfd9c0,#aebd97);
     border:1px solid var(--line);box-shadow:var(--shadow);
   }
-  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
   .portrait .ph-label{
-    position:absolute;inset:0;display:grid;place-items:center;text-align:center;
+    position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:1;
     font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;
     color:var(--sage-darker);text-transform:uppercase;padding:20px;
   }
@@ -302,9 +302,9 @@
     position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;
     background:linear-gradient(150deg,#d3ddc5,#b3c29c);border:1px solid var(--line);
   }
-  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
   .photo .ph-label{
-    position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;
+    position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;z-index:1;
     font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.1em;
     color:var(--sage-darker);text-transform:uppercase;
   }
@@ -402,7 +402,7 @@
     <div class="readouts reveal">
       <div class="readout"><div class="num" data-count="8" data-suffix="+">8+</div><div class="cap">Years in regulated<br>medical-device quality</div></div>
       <div class="readout"><div class="num">0</div><div class="cap">Findings on a major<br>external certification audit</div></div>
-      <div class="readout"><div class="num" data-count="65" data-suffix="+">65+</div><div class="cap">Product GTINs released<br>to global markets</div></div>
+      <div class="readout"><div class="num" data-count="12" data-suffix="+">12+</div><div class="cap">Product GTINs released<br>to global markets</div></div>
       <div class="readout"><div class="num">EN·VN</div><div class="cap">Fluent — bilingual<br>&amp; bicultural</div></div>
     </div>
   </div>
@@ -424,7 +424,7 @@
       </div>
       <div>
         <p>My approach comes with a hustle I come by honestly — a get-it-done energy rooted in my family's story. But my field rewards the opposite instinct too: patience, precision, and the discipline to slow down and get it exactly right. Learning to hold both at once is the most useful thing I've figured out.</p>
-        <p>I read, write, and speak both English and Vietnamese fluently, and my heritage shapes how I build trust across cultures and teams. As more medical-device and electronics manufacturing scales across the US and Asia-Pacific, that bridge keeps proving useful.</p>
+        <p>I read, write, and speak both Vietnamese and English fluently — Vietnamese is my mother tongue — and my heritage shapes how I build trust across cultures and teams. As more medical-device and electronics manufacturing scales across the US and Asia-Pacific, that bridge keeps proving useful.</p>
       </div>
     </div>
   </div>
@@ -454,7 +454,7 @@
               <p class="role-summary">Lead supplier quality and compliance for medical-device production under FDA 21 CFR Part 820 and ISO 13485.</p>
               <ul class="bullets">
                 <li>Lead supplier quality across multiple suppliers and contract manufacturers, ensuring sustained regulatory compliance.</li>
-                <li>Led the supplier-quality response to a critical foreign-material investigation — driving corrective actions, partnering directly with suppliers, and supporting on-site lab work; recognized at the VP level and helped lift a finished-good hold to enable timely shipment.</li>
+                <li>Led the supplier-quality response to a critical foreign-material investigation — corrective actions, direct supplier partnership, and on-site lab work — recognized at the VP level; the catch and quick remediation realized ~$80K in immediate scrap savings while averting the far larger cost of the defect reaching production.</li>
                 <li>Drove the operating unit's first full product through PPAP, establishing tight supplier controls while managing a contract manufacturer through significant challenges.</li>
                 <li>Lead daily process-validation (OQ/PQ) meetings with a contract manufacturer, coaching the supplier toward faster, higher-quality results.</li>
                 <li>Caught and corrected an error in a tolerance-interval analysis during PPAP review using applied statistics, then documented the learnings as reusable guidance for the team.</li>
@@ -477,9 +477,9 @@
             <div>
               <p class="role-summary">Owned supplier quality for the components and materials feeding medical-device production.</p>
               <ul class="bullets">
-                <li>Served as supplier quality engineer on a ~2-year manufacturing transfer, closing all PPAP deliverables and passing the external certification audit with zero findings — a seamless transfer by company standards.</li>
+                <li>Contributed as SQE to a cross-functional team on a ~2-year manufacturing transfer that closed all PPAP deliverables and passed the external certification audit with zero findings — a seamless transfer by company standards.</li>
                 <li>Helped design a transfer strategy that avoided an estimated ~$500K in projected costs by using a business-process approach instead of a costly IT build; supported a cross-functional Kaizen and risk-based gap closure.</li>
-                <li>Supported a global regulatory launch, helping release 65+ product GTINs through implementation and a legal manufacturing change — coordinating across time zones with an overseas contract manufacturer.</li>
+                <li>Supported a global regulatory launch, helping release 12+ product GTINs through implementation and a legal manufacturing change — coordinating across time zones with an overseas contract manufacturer.</li>
                 <li>Devised a creative overpackaging solution that prevented shipping damage while avoiding expensive verification testing and new part numbers.</li>
                 <li>Traveled on-site to international contract manufacturers, often on short notice, to support builds, supplier readiness, and design-verification closure.</li>
                 <li>Created supplier management-of-change questionnaire forms adopted across the team; mentored colleagues on inspection methods.</li>
@@ -694,7 +694,7 @@
         <div class="skill-group">
           <h4>Supplier &amp; Process</h4>
           <div class="chips">
-            <span class="chip">Supplier Audits</span><span class="chip">PPAP</span><span class="chip">First Article Inspection</span><span class="chip">Supplier Development</span><span class="chip">Manufacturing Transfer</span><span class="chip">Management of Change</span><span class="chip">Contract Mfg. Management</span>
+            <span class="chip">Supplier Audits</span><span class="chip">Supplier GEMBA</span><span class="chip">PPAP</span><span class="chip">First Article Inspection</span><span class="chip">Supplier Development</span><span class="chip">Manufacturing Transfer</span><span class="chip">Management of Change</span><span class="chip">Contract Mfg. Management</span>
           </div>
         </div>
         <div class="skill-group">
@@ -731,12 +731,12 @@
     </div>
     <div class="vol-grid reveal">
       <div class="vol-text">
-        <p>For two years running, I represented my company at a regional Chamber of Commerce career-connect day — coordinating demos, running the booth, and talking with high-schoolers about what engineering in medical devices actually looks like.</p>
-        <p>It connects back to where I started: years of one-on-one STEM mentoring and tutoring. Helping someone see that a technical career is within reach is its own kind of quality work.</p>
+        <p>Most recently, I joined my company's volunteers for our annual meal-packing day with <strong>Meals from the Heart</strong> — hairnets on, scooping and sealing bag after bag of meals headed to neighbors facing hunger.</p>
+        <p>I also serve as a career advisor for high-school students — through my employer and a regional Chamber of Commerce program — mentoring them on what a corporate career actually looks like, reviewing résumés, and helping them think through degree and field choices. It connects back to where I started: years of one-on-one STEM mentoring. Helping someone see that a technical career is within reach is its own kind of quality work.</p>
       </div>
       <div class="photo-row">
-        <div class="photo"><img src="images/community-1.jpg" alt="Community outreach" onerror="this.remove()"><div class="ph-label">images/community-1.jpg</div></div>
-        <div class="photo"><img src="images/community-2.jpg" alt="Community outreach" onerror="this.remove()"><div class="ph-label">images/community-2.jpg</div></div>
+        <div class="photo"><img src="images/community-1.jpg" alt="Meals from the Heart volunteering" onerror="this.remove()"><div class="ph-label">images/community-1.jpg<br>— Meals from the Heart —</div></div>
+        <div class="photo"><img src="images/community-2.jpg" alt="Meals from the Heart volunteering" onerror="this.remove()"><div class="ph-label">images/community-2.jpg<br>— meal-packing team —</div></div>
       </div>
     </div>
   </div>
@@ -790,7 +790,7 @@
       </div>
       <div class="foot-links">
         <a href="https://www.linkedin.com/in/jonathanle1227/" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span> /in/jonathanle1227</a>
-        <a href="mailto:your.email@example.com"><span class="lbl">Email</span> your.email@example.com</a>
+        <a href="mailto:jdle1227@gmail.com"><span class="lbl">Email</span> jdle1227@gmail.com</a>
         <a href="Jonathan_Le_Resume.pdf" download><span class="lbl">Résumé</span> Download PDF</a>
       </div>
     </div>
