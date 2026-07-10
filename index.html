@@ -366,6 +366,46 @@
   .vn-narrative [data-lang="en"]{display:block}
   html.lang-vi .vn-narrative [data-lang="en"]{display:none}
   html.lang-vi .vn-narrative [data-lang="vi"]{display:block}
+
+  /* ---------- community: activities + carousel ---------- */
+  .community-layout{display:grid;grid-template-columns:0.92fr 1.08fr;gap:44px;align-items:start}
+  @media (max-width:820px){.community-layout{grid-template-columns:1fr;gap:30px}}
+  .activities{display:flex;flex-direction:column;gap:24px}
+  .activity{border-left:2px solid var(--line);padding-left:18px}
+  .activity-label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);font-weight:600;display:block;margin-bottom:8px}
+  .activity p{font-size:1rem;color:var(--ink);margin:0;line-height:1.55}
+  .spark-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+  .sstat{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.02em;background:rgba(139,162,119,.16);color:var(--sage-darker);padding:5px 9px;border-radius:6px}
+  .sstat b{color:var(--sage-deep);font-weight:600}
+  .spark-quote{margin-top:14px;font-size:.92rem;font-style:italic;color:var(--ink);border-top:1px solid var(--line-soft);padding-top:12px;line-height:1.5}
+  .spark-quote-who{display:block;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.08em;color:var(--honey);margin-top:9px;text-transform:uppercase}
+
+  .carousel{position:relative;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(150deg,#d3ddc5,#b3c29c);cursor:zoom-in}
+  .cslide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;pointer-events:none}
+  .cslide.active{opacity:1;pointer-events:auto}
+  .cslide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .cslide .ph-label{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;color:var(--sage-darker);text-transform:uppercase;z-index:1}
+  .c-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:26px 16px 13px;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.04em;background:linear-gradient(to top,rgba(38,46,32,.72),transparent)}
+  .c-expand{position:absolute;top:10px;right:10px;z-index:4;width:32px;height:32px;border-radius:8px;border:none;background:rgba(255,255,255,.86);color:var(--forest);cursor:pointer;font-size:.95rem;display:grid;place-items:center;transition:background .16s}
+  .c-expand:hover{background:#fff}
+  .c-dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+  .c-dot{width:8px;height:8px;border-radius:50%;border:none;background:var(--line);cursor:pointer;padding:0;transition:all .2s}
+  .c-dot:hover{background:var(--sage)}
+  .c-dot.active{background:var(--sage-deep);transform:scale(1.3)}
+
+  /* ---------- lightbox ---------- */
+  .lightbox{position:fixed;inset:0;z-index:200;background:rgba(28,34,24,.93);display:none;align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lb-stage{position:relative;max-width:min(1100px,92vw);max-height:86vh;display:flex;align-items:center;justify-content:center}
+  .lb-stage img{max-width:100%;max-height:86vh;border-radius:10px;display:none}
+  .lb-ph{width:min(72vw,720px);aspect-ratio:3/2;border-radius:10px;background:linear-gradient(150deg,#cfd9c0,#aebd97);display:none;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.1em;color:var(--sage-darker);text-transform:uppercase;text-align:center;padding:20px}
+  .lb-close{position:absolute;top:18px;right:20px;z-index:210;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:1.15rem;cursor:pointer}
+  .lb-close:hover{background:rgba(255,255,255,.28)}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:210;width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:1.7rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+  .lb-nav:hover{background:rgba(255,255,255,.28)}
+  .lb-prev{left:20px}.lb-next{right:20px}
+  .lb-cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#e8eede;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.05em}
+  @media (max-width:600px){.lb-nav{width:40px;height:40px;font-size:1.4rem}.lb-prev{left:8px}.lb-next{right:8px}}
 </style>
 </head>
 <body>
@@ -707,14 +747,63 @@
 <span class="eyebrow"><span class="t-en">Community</span><span class="t-vi">Cộng đồng</span></span>
 <h2><span class="t-en">Showing up beyond the job.</span><span class="t-vi">Cống hiến ngoài công việc.</span></h2>
 </div>
-<div class="vol-grid reveal">
-<div class="vol-text">
-<p><span class="t-en">Most recently, I joined my company's volunteers for our annual meal-packing day with <strong>Meals from the Heart</strong> — hairnets on, scooping and sealing bag after bag of meals headed to neighbors facing hunger.</span><span class="t-vi">Gần đây nhất, tôi đã cùng các tình nguyện viên của công ty tham gia ngày đóng gói bữa ăn thường niên với <strong>Meals from the Heart</strong> — đội mũ trùm tóc, múc và niêm phong hết túi này đến túi khác những bữa ăn dành cho những người hàng xóm đang thiếu ăn.</span></p>
-<p><span class="t-en">I also serve as a career advisor for high-school students — through my employer and a regional Chamber of Commerce program — mentoring them on what a corporate career actually looks like, reviewing résumés, and helping them think through degree and field choices. It connects back to where I started: years of one-on-one STEM mentoring. Helping someone see that a technical career is within reach is its own kind of quality work.</span><span class="t-vi">Tôi cũng làm cố vấn nghề nghiệp cho học sinh trung học — thông qua công ty và một chương trình của Phòng Thương mại khu vực — hướng dẫn các em về việc một sự nghiệp trong môi trường doanh nghiệp thực sự ra sao, xem xét hồ sơ (résumé), và giúp các em định hướng ngành học cùng lĩnh vực yêu thích. Điều đó gắn với nơi tôi bắt đầu: nhiều năm cố vấn STEM một-kèm-một. Giúp ai đó nhận ra rằng một sự nghiệp kỹ thuật nằm trong tầm với cũng là một dạng công việc chất lượng.</span></p>
+
+<div class="community-layout reveal">
+<div class="activities">
+<div class="activity">
+<span class="activity-label"><span class="t-en">Career Advisor</span><span class="t-vi">Cố vấn Nghề nghiệp</span></span>
+<p><span class="t-en">I serve as a career advisor for high-school students — through Medtronic and a regional Chamber of Commerce program — mentoring them on what a corporate career actually looks like, reviewing résumés, and helping them think through degree and field choices. It builds on years of one-on-one STEM mentoring.</span><span class="t-vi">Tôi làm cố vấn nghề nghiệp cho học sinh trung học — thông qua Medtronic và một chương trình của Phòng Thương mại khu vực — hướng dẫn các em về việc một sự nghiệp trong môi trường doanh nghiệp thực sự ra sao, xem xét hồ sơ, và giúp các em định hướng ngành học cùng lĩnh vực. Điều này tiếp nối nhiều năm cố vấn STEM một-kèm-một.</span></p>
 </div>
-<div class="photo-row">
-<div class="photo"><img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-1.jpg"/><div class="ph-label">images/community-1.jpg<br/>— Meals from the Heart —</div></div>
-<div class="photo"><img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-2.jpg"/><div class="ph-label">images/community-2.jpg<br/>— meal-packing team —</div></div>
+<div class="activity">
+<span class="activity-label">Meals from the Heart</span>
+<p><span class="t-en">Each year I join Medtronic volunteers to pack meals with Meals from the Heart — hairnets on, scooping and sealing bag after bag headed to neighbors facing hunger.</span><span class="t-vi">Mỗi năm, tôi cùng các tình nguyện viên Medtronic tham gia đóng gói bữa ăn với Meals from the Heart — đội mũ trùm tóc, múc và niêm phong hết túi này đến túi khác dành cho những người hàng xóm đang thiếu ăn.</span></p>
+</div>
+<div class="activity">
+<span class="activity-label">Medtronic Spark</span>
+<p><span class="t-en">I volunteer with Medtronic Spark, which brings students from under-served communities in to discover the health-science industry and Medtronic. At our first Spark event of the year, our team turned 1.5 hours into more than 80 hours of prep — assembling 1,500 swag bags and Art Robot kits and installing nearly 2,000 batteries — helping deliver an unforgettable day for local 5th-graders.</span><span class="t-vi">Tôi tham gia tình nguyện cùng Medtronic Spark, chương trình đưa học sinh từ các cộng đồng còn thiếu điều kiện đến khám phá ngành khoa học sức khỏe và Medtronic. Tại sự kiện Spark đầu tiên trong năm, nhóm chúng tôi đã biến 1,5 giờ thành hơn 80 giờ chuẩn bị — lắp ráp 1.500 túi quà và bộ Art Robot, lắp gần 2.000 viên pin — góp phần mang đến một ngày khó quên cho các em học sinh lớp 5 tại địa phương.</span></p>
+<div class="spark-stats">
+<span class="sstat"><b>80+</b> <span class="t-en">hrs prep in 1.5 hrs</span><span class="t-vi">giờ chuẩn bị trong 1,5 giờ</span></span>
+<span class="sstat"><b>1,500</b> <span class="t-en">kits assembled</span><span class="t-vi">bộ kit lắp ráp</span></span>
+<span class="sstat"><b>~2,000</b> <span class="t-en">batteries installed</span><span class="t-vi">viên pin lắp đặt</span></span>
+</div>
+<div class="spark-quote"><span class="t-en">In just 1.5 hours, your work added up to more than 80 hours of prep — an extraordinary contribution setting the tone for a successful event.</span><span class="t-vi">Chỉ trong 1,5 giờ, công sức của các bạn đã cộng dồn thành hơn 80 giờ chuẩn bị — một đóng góp phi thường, đặt nền cho một sự kiện thành công.</span><span class="spark-quote-who"><span class="t-en">— Medtronic Spark event team</span><span class="t-vi">— Đội ngũ sự kiện Medtronic Spark</span></span></div>
+</div>
+</div>
+<div class="carousel-wrap">
+<div class="carousel" id="carousel" title="Click to enlarge">
+<figure class="cslide active" data-img="images/community-1.jpg" data-label="images/community-1.jpg">
+<img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-1.jpg"/>
+<span class="ph-label">images/community-1.jpg<br/>— Medtronic Volunteering —</span>
+<figcaption class="c-cap"><span class="t-en">Medtronic gives back to our communities</span><span class="t-vi">Medtronic chung tay vì cộng đồng.</span></figcaption>
+</figure>
+<figure class="cslide" data-img="images/community-2.jpg" data-label="images/community-2.jpg">
+<img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-2.jpg"/>
+<span class="ph-label">images/community-2.jpg<br/>— Meals from the Heart —</span>
+<figcaption class="c-cap"><span class="t-en">Our Medtronic volunteer crew</span><span class="t-vi">Nhóm tình nguyện viên Medtronic của chúng tôi</span></figcaption>
+</figure>
+<figure class="cslide" data-img="images/community-3.jpg" data-label="images/community-3.jpg">
+<img alt="Medtronic Spark volunteering" onerror="this.remove()" src="images/community-3.jpg"/>
+<span class="ph-label">images/community-3.jpg<br/>— Medtronic Spark —</span>
+<figcaption class="c-cap"><span class="t-en">Medtronic Spark Volunteer Group</span><span class="t-vi">Nhóm tình nguyện Spark của Medtronic</span></figcaption>
+</figure>
+<figure class="cslide" data-img="images/community-4.jpg" data-label="images/community-4.jpg">
+<img alt="Medtronic Spark volunteering" onerror="this.remove()" src="images/community-4.jpg"/>
+<span class="ph-label">images/community-4.jpg<br/>— Medtronic Information Booth —</span>
+<figcaption class="c-cap"><span class="t-en">Speaking to future Medtronic enginners</span><span class="t-vi">Giao lưu với các kỹ sư tương lai của Medtronic</span></figcaption>
+</figure>
+<figure class="cslide" data-img="images/community-5.jpg" data-label="images/community-5.jpg">
+<img alt="Career Advisor volunteering" onerror="this.remove()" src="images/community-5.jpg"/>
+<span class="ph-label">images/community-5.jpg<br/>— Career Advisor —</span>
+<figcaption class="c-cap"><span class="t-en">Students get hands on at Medtronic</span><span class="t-vi">Học sinh trải nghiệm thực tế tại Medtronic</span></figcaption>
+</figure>
+<figure class="cslide" data-img="images/community-6.jpg" data-label="images/community-6.jpg">
+<img alt="Career Advisor volunteering" onerror="this.remove()" src="images/community-6.jpg"/>
+<span class="ph-label">images/community-6.jpg<br/>— Career Advisor —</span>
+<figcaption class="c-cap"><span class="t-en">Previewing ways we will work in the future</span><span class="t-vi">Khám phá những cách chúng ta sẽ làm việc trong tương lai</span></figcaption>
+</figure>
+<button aria-label="Enlarge photo" class="c-expand" id="cExpand">⤢</button>
+</div>
+<div class="c-dots" id="cDots"><button aria-label="Photo 1" class="c-dot active" data-i="0"></button><button aria-label="Photo 2" class="c-dot" data-i="1"></button><button aria-label="Photo 3" class="c-dot" data-i="2"></button><button aria-label="Photo 4" class="c-dot" data-i="3"></button><button aria-label="Photo 5" class="c-dot" data-i="4"></button><button aria-label="Photo 6" class="c-dot" data-i="5"></button></div>
 </div>
 </div>
 </div>
@@ -727,7 +816,6 @@
 <span class="eyebrow"><span class="t-en">Heritage · Việt Nam</span><span class="t-vi">Nguồn cội · Việt Nam</span></span>
 <h2><span class="t-en">Where it started — and where I'm headed.</span><span class="t-vi">Nơi bắt đầu — và nơi tôi hướng tới.</span></h2>
 </div>
-
 </div>
 <div class="vn-body reveal">
 <div class="vn-narrative">
@@ -796,6 +884,70 @@
       var cio=new IntersectionObserver(function(ents){ents.forEach(function(en){if(!en.isIntersecting)return;cio.unobserve(el);var t0=performance.now();function step(now){var p=Math.min((now-t0)/900,1);var val=Math.round((0.5-Math.cos(p*Math.PI)/2)*target);el.textContent=val+suffix;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});},{threshold:.5});cio.observe(el);
     });
   }
+})();
+</script>
+
+<div aria-label="Photo viewer" aria-modal="true" class="lightbox" id="lightbox" role="dialog">
+<button aria-label="Close" class="lb-close" id="lbClose">✕</button>
+<button aria-label="Previous photo" class="lb-nav lb-prev" id="lbPrev">‹</button>
+<div class="lb-stage">
+<img alt="" id="lbImg"/>
+<div class="lb-ph" id="lbPh"></div>
+</div>
+<button aria-label="Next photo" class="lb-nav lb-next" id="lbNext">›</button>
+<div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+(function(){
+  var carousel=document.getElementById('carousel');
+  if(!carousel) return;
+  var slides=[].slice.call(carousel.querySelectorAll('.cslide'));
+  var dots=[].slice.call(document.querySelectorAll('#cDots .c-dot'));
+  var idx=0, timer=null;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lbImg');
+  var lbPh=document.getElementById('lbPh');
+  var lbCap=document.getElementById('lbCap');
+  function show(i){
+    idx=(i+slides.length)%slides.length;
+    slides.forEach(function(s,n){s.classList.toggle('active',n===idx);});
+    dots.forEach(function(d,n){d.classList.toggle('active',n===idx);});
+    if(lb.classList.contains('open')) renderLb();
+  }
+  function next(){show(idx+1);}
+  function start(){ if(reduce) return; stop(); timer=setInterval(next,4500); }
+  function stop(){ if(timer) clearInterval(timer); timer=null; }
+  dots.forEach(function(d){d.addEventListener('click',function(){show(+d.getAttribute('data-i')); start();});});
+  carousel.addEventListener('mouseenter',stop);
+  carousel.addEventListener('mouseleave',function(){ if(!lb.classList.contains('open')) start(); });
+  function renderLb(){
+    var s=slides[idx], src=s.getAttribute('data-img'), label=s.getAttribute('data-label');
+    lbCap.innerHTML='';
+    var cap=s.querySelector('.c-cap');
+    if(cap) lbCap.appendChild(cap.cloneNode(true));
+    lbImg.style.display='none'; lbPh.style.display='none';
+    var test=new Image();
+    test.onload=function(){ lbImg.src=src; lbImg.style.display='block'; lbPh.style.display='none'; };
+    test.onerror=function(){ lbPh.textContent=label; lbPh.style.display='grid'; lbImg.style.display='none'; };
+    test.src=src;
+  }
+  function openLb(){ lb.classList.add('open'); document.body.style.overflow='hidden'; stop(); renderLb(); }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; start(); }
+  carousel.addEventListener('click',function(e){ if(e.target.closest('.c-dot')) return; openLb(); });
+  document.getElementById('cExpand').addEventListener('click',function(e){ e.stopPropagation(); openLb(); });
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  document.getElementById('lbPrev').addEventListener('click',function(){ show(idx-1); });
+  document.getElementById('lbNext').addEventListener('click',function(){ show(idx+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') closeLb();
+    else if(e.key==='ArrowLeft') show(idx-1);
+    else if(e.key==='ArrowRight') show(idx+1);
+  });
+  show(0); start();
 })();
 </script>
 </body>
