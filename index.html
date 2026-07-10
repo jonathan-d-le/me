@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jonathan Le — Senior Supplier Quality Engineer</title>
-<meta name="description" content="Jonathan Le — Senior Supplier Quality Engineer in medical devices. Bilingual English & Vietnamese. ISO 13485, 21 CFR 820, supplier audits, PPAP, process validation." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta content="Jonathan Le — Senior Supplier Quality Engineer in medical devices. Bilingual English &amp; Vietnamese. ISO 13485, 21 CFR 820, supplier audits, PPAP, process validation." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
   :root{
     --bg:#e9ede1;
@@ -222,7 +223,7 @@
     max-height:0;overflow:hidden;
     transition:max-height .35s ease;
   }
-  .role.open .role-body{max-height:760px}
+  .role.open .role-body{max-height:2200px}
   .role-body-inner{padding:0 6px 28px;display:grid;grid-template-columns:130px 1fr;gap:22px}
   .role-summary{font-size:.98rem;color:var(--ink);margin:0 0 14px}
   ul.bullets{margin:0;padding:0;list-style:none;display:grid;gap:11px}
@@ -354,533 +355,445 @@
     .role-body,.role-toggle,.rec,.btn,.portrait{transition:none}
   }
   :focus-visible{outline:2px solid var(--sage-deep);outline-offset:2px;border-radius:6px}
+
+  /* ---------- i18n page translation ---------- */
+  .t-vi{display:none}
+  html.lang-vi .t-en{display:none}
+  html.lang-vi .t-vi{display:inline}
+  .lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--paper)}
+  .lang-switch button{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;border:none;background:none;cursor:pointer;padding:8px 12px;color:var(--muted);transition:all .16s}
+  .lang-switch button.active{background:var(--sage-deep);color:#fff}
+  .vn-narrative [data-lang="en"]{display:block}
+  html.lang-vi .vn-narrative [data-lang="en"]{display:none}
+  html.lang-vi .vn-narrative [data-lang="vi"]{display:block}
 </style>
 </head>
 <body>
-
 <!-- ============ NAV ============ -->
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#top"><span class="monogram">JL</span> Jonathan Le</a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#recognition">Recognition</a>
-      <a href="#education">Education</a>
-      <a href="#volunteering">Community</a>
-      <a href="#vietnam">Việt Nam</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <a class="btn btn-primary" href="Jonathan_Le_Resume.pdf" download>Download résumé</a>
-  </div>
+<div class="wrap nav-inner">
+<a class="brand" href="#top"><span class="monogram">JL</span> Jonathan Le</a>
+<nav class="nav-links" id="navLinks">
+<a href="#about"><span class="t-en">About</span><span class="t-vi">Giới thiệu</span></a>
+<a href="#experience"><span class="t-en">Experience</span><span class="t-vi">Kinh nghiệm</span></a>
+<a href="#recognition"><span class="t-en">Recognition</span><span class="t-vi">Ghi nhận</span></a>
+<a href="#education"><span class="t-en">Education</span><span class="t-vi">Học vấn</span></a>
+<a href="#volunteering"><span class="t-en">Community</span><span class="t-vi">Cộng đồng</span></a>
+<a href="#vietnam"><span class="t-en">Việt Nam</span><span class="t-vi">Việt Nam</span></a>
+<a href="#contact"><span class="t-en">Contact</span><span class="t-vi">Liên hệ</span></a>
+</nav>
+<button aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+<div aria-label="Language" class="lang-switch" id="pageLang" role="group"><button class="active" data-setlang="en">EN</button><button data-setlang="vi">VN</button></div><a class="btn btn-primary" download="" href="Jonathan_Le_Resume.pdf"><span class="t-en">Download résumé</span><span class="t-vi">Tải CV</span></a>
+</div>
 </header>
-
 <!-- ============ HERO ============ -->
 <a id="top"></a>
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Senior Supplier Quality Engineer · Medical Devices</span>
-        <h1>Quality you can<br>stake a life on.</h1>
-        <p class="role">Minneapolis, MN · Bilingual English &amp; Vietnamese · Open to roles in Vietnam</p>
-        <p class="thesis">Eight years making sure the parts inside medical devices meet the standard a patient deserves — driven by where my family came from, disciplined by where the work demands I go.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#experience">See the work</a>
-          <a class="btn btn-ghost" href="#vietnam">Read my story</a>
-        </div>
-      </div>
-      <div class="portrait reveal">
-        <img src="images/portrait.jpg" alt="Jonathan Le" onerror="this.remove()">
-        <div class="ph-label">images/portrait.jpg<br>— add a portrait photo —</div>
-      </div>
-    </div>
-
-    <div class="readouts reveal">
-      <div class="readout"><div class="num" data-count="8" data-suffix="+">8+</div><div class="cap">Years in regulated<br>medical-device quality</div></div>
-      <div class="readout"><div class="num">0</div><div class="cap">Findings on a major<br>external certification audit</div></div>
-      <div class="readout"><div class="num" data-count="12" data-suffix="+">12+</div><div class="cap">Product GTINs released<br>to global markets</div></div>
-      <div class="readout"><div class="num">EN·VN</div><div class="cap">Fluent — bilingual<br>&amp; bicultural</div></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="hero-grid">
+<div>
+<span class="eyebrow"><span class="t-en">Senior Supplier Quality Engineer · Medical Devices</span><span class="t-vi">Kỹ sư Chất lượng Nhà cung cấp Cấp cao · Thiết bị Y tế</span></span>
+<h1><span class="t-en">Quality you can<br/>stake a life on.</span><span class="t-vi">Chất lượng xứng đáng để<br/>đặt cược một mạng người.</span></h1>
+<p class="role"><span class="t-en">Minneapolis, MN · Bilingual English &amp; Vietnamese · Open to roles in Vietnam</span><span class="t-vi">Minneapolis, MN · Song ngữ Anh &amp; Việt · Sẵn sàng cho các cơ hội tại Việt Nam</span></p>
+<p class="thesis"><span class="t-en">Eight years making sure the parts inside medical devices meet the standard a patient deserves — driven by where my family came from, disciplined by where the work demands I go.</span><span class="t-vi">Tám năm bảo đảm những linh kiện bên trong thiết bị y tế đạt đúng tiêu chuẩn mà một bệnh nhân xứng đáng được nhận — được thôi thúc bởi nơi gia đình tôi đã ra đi, và được rèn giũa bởi nơi công việc đòi hỏi tôi phải đến.</span></p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#experience"><span class="t-en">See the work</span><span class="t-vi">Xem công việc</span></a>
+<a class="btn btn-ghost" href="#vietnam"><span class="t-en">Read my story</span><span class="t-vi">Đọc câu chuyện của tôi</span></a>
+</div>
+</div>
+<div class="portrait reveal">
+<img alt="Jonathan Le" onerror="this.remove()" src="images/portrait.jpg"/>
+<div class="ph-label">images/portrait.jpg<br/>— add a portrait photo —</div>
+</div>
+</div>
+<div class="readouts reveal">
+<div class="readout"><div class="num" data-count="8" data-suffix="+">8+</div><div class="cap"><span class="t-en">Years in regulated<br/>medical-device quality</span><span class="t-vi">Năm kinh nghiệm chất lượng<br/>thiết bị y tế</span></div></div>
+<div class="readout"><div class="num">0</div><div class="cap"><span class="t-en">Findings on a major<br/>external certification audit</span><span class="t-vi">Phát hiện · đánh giá<br/>chứng nhận bên ngoài</span></div></div>
+<div class="readout"><div class="num" data-count="12" data-suffix="+">12+</div><div class="cap"><span class="t-en">Product GTINs released<br/>to global markets</span><span class="t-vi">Mã GTIN đã phát hành<br/>ra thị trường toàn cầu</span></div></div>
+<div class="readout"><div class="num">EN·VN</div><div class="cap"><span class="t-en">Fluent — bilingual<br/>&amp; bicultural</span><span class="t-vi">Thông thạo — song ngữ<br/>&amp; song văn hóa</span></div></div>
+</div>
+</div>
 </section>
-
 <div class="wrap"><div class="rule"></div></div>
-
 <!-- ============ ABOUT ============ -->
 <section id="about">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">About</span>
-      <h2>An engineer's precision, an immigrant's drive.</h2>
-    </div>
-    <div class="about-body reveal">
-      <div>
-        <p>I'm a Senior Supplier Quality Engineer in medical devices, where the products end up inside someone's body — so "good enough" means whether a device performs safely for a real patient. That bar shapes how I work.</p>
-        <p>I've sat on both sides of the table: as a manufacturing engineer making the parts, and as the quality engineer holding suppliers accountable for them. That makes me practical about what's actually achievable on a production floor, and stubborn about the things that can't be compromised.</p>
-      </div>
-      <div>
-        <p>My approach comes with a hustle I come by honestly — a get-it-done energy rooted in my family's story. But my field rewards the opposite instinct too: patience, precision, and the discipline to slow down and get it exactly right. Learning to hold both at once is the most useful thing I've figured out.</p>
-        <p>I read, write, and speak both Vietnamese and English fluently — Vietnamese is my mother tongue — and my heritage shapes how I build trust across cultures and teams. As more medical-device and electronics manufacturing scales across the US and Asia-Pacific, that bridge keeps proving useful.</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<span class="eyebrow"><span class="t-en">About</span><span class="t-vi">Giới thiệu</span></span>
+<h2><span class="t-en">An engineer's precision, an immigrant's drive.</span><span class="t-vi">Sự chính xác của một kỹ sư, khát vọng của một người nhập cư.</span></h2>
+</div>
+<div class="about-body reveal">
+<div>
+<p><span class="t-en">I'm a Senior Supplier Quality Engineer in medical devices, where the products end up inside someone's body — so "good enough" means whether a device performs safely for a real patient. That bar shapes how I work.</span><span class="t-vi">Tôi là Kỹ sư Chất lượng Nhà cung cấp Cấp cao trong ngành thiết bị y tế — nơi sản phẩm cuối cùng nằm bên trong cơ thể con người, nên “đủ tốt” có nghĩa là liệu thiết bị có hoạt động an toàn cho một bệnh nhân thật hay không. Chuẩn mực đó định hình cách tôi làm việc.</span></p>
+<p><span class="t-en">I've sat on both sides of the table: as a manufacturing engineer making the parts, and as the quality engineer holding suppliers accountable for them. That makes me practical about what's actually achievable on a production floor, and stubborn about the things that can't be compromised.</span><span class="t-vi">Tôi đã đứng ở cả hai phía của bàn làm việc: vừa là kỹ sư sản xuất tạo ra linh kiện, vừa là kỹ sư chất lượng buộc nhà cung cấp phải chịu trách nhiệm về chúng. Điều đó giúp tôi thực tế về những gì thật sự khả thi trên sàn sản xuất, và kiên định với những điều không thể thỏa hiệp.</span></p>
+</div>
+<div>
+<p><span class="t-en">My approach comes with a hustle I come by honestly — a get-it-done energy rooted in my family's story. But my field rewards the opposite instinct too: patience, precision, and the discipline to slow down and get it exactly right. Learning to hold both at once is the most useful thing I've figured out.</span><span class="t-vi">Cách làm việc của tôi đi kèm một sự xông xáo mà tôi có được rất tự nhiên — nguồn năng lượng “làm cho bằng được” bắt nguồn từ câu chuyện của gia đình tôi. Nhưng lĩnh vực của tôi cũng tưởng thưởng cho bản năng ngược lại: sự kiên nhẫn, tính chính xác, và kỷ luật để chậm lại và làm cho thật đúng. Học được cách giữ cân bằng cả hai điều đó cùng lúc là điều hữu ích nhất tôi từng nhận ra.</span></p>
+<p><span class="t-en">I read, write, and speak both Vietnamese and English fluently — Vietnamese is my mother tongue — and my heritage shapes how I build trust across cultures and teams. As more medical-device and electronics manufacturing scales across the US and Asia-Pacific, that bridge keeps proving useful.</span><span class="t-vi">Tôi đọc, viết và nói thông thạo cả tiếng Việt lẫn tiếng Anh — tiếng Việt là tiếng mẹ đẻ của tôi — và nguồn cội ấy định hình cách tôi xây dựng niềm tin giữa các nền văn hóa và đội nhóm. Khi ngày càng nhiều hoạt động sản xuất thiết bị y tế và điện tử mở rộng khắp Hoa Kỳ và Châu Á – Thái Bình Dương, chiếc cầu nối ấy tiếp tục chứng minh giá trị.</span></p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ EXPERIENCE ============ -->
 <section id="experience">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Experience</span>
-      <h2>A climb through quality &amp; manufacturing.</h2>
-      <p>Tap any role to expand. Internal program and supplier names have been generalized.</p>
-    </div>
-
-    <div class="timeline reveal">
-
-      <div class="role">
-        <button class="role-head" aria-expanded="false">
-          <span class="role-date">2025 — Present</span>
-          <span><span class="role-title">Senior Supplier Quality Engineer</span><span class="role-org">Medtronic · Cardiac Ablation Solutions</span></span>
-          <span class="role-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="role-body">
-          <div class="role-body-inner">
-            <div class="role-spacer"></div>
-            <div>
-              <p class="role-summary">Lead supplier quality and compliance for medical-device production under FDA 21 CFR Part 820 and ISO 13485.</p>
-              <ul class="bullets">
-                <li>Lead supplier quality across multiple suppliers and contract manufacturers, ensuring sustained regulatory compliance.</li>
-                <li>Led the supplier-quality response to a critical foreign-material investigation — corrective actions, direct supplier partnership, and on-site lab work — recognized at the VP level; the catch and quick remediation realized ~$80K in immediate scrap savings while averting the far larger cost of the defect reaching production.</li>
-                <li>Drove the operating unit's first full product through PPAP, establishing tight supplier controls while managing a contract manufacturer through significant challenges.</li>
-                <li>Lead daily process-validation (OQ/PQ) meetings with a contract manufacturer, coaching the supplier toward faster, higher-quality results.</li>
-                <li>Caught and corrected an error in a tolerance-interval analysis during PPAP review using applied statistics, then documented the learnings as reusable guidance for the team.</li>
-                <li>Closed high-priority supplier change orders in record turnaround to clear backorders and protect shipment schedules.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="role">
-        <button class="role-head" aria-expanded="false">
-          <span class="role-date">2022 — 2025</span>
-          <span><span class="role-title">Supplier Quality Engineer</span><span class="role-org">Medtronic</span></span>
-          <span class="role-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="role-body">
-          <div class="role-body-inner">
-            <div class="role-spacer"></div>
-            <div>
-              <p class="role-summary">Owned supplier quality for the components and materials feeding medical-device production.</p>
-              <ul class="bullets">
-                <li>Contributed as SQE to a cross-functional team on a ~2-year manufacturing transfer that closed all PPAP deliverables and passed the external certification audit with zero findings — a seamless transfer by company standards.</li>
-                <li>Helped design a transfer strategy that avoided an estimated ~$500K in projected costs by using a business-process approach instead of a costly IT build; supported a cross-functional Kaizen and risk-based gap closure.</li>
-                <li>Supported a global regulatory launch, helping release 12+ product GTINs through implementation and a legal manufacturing change — coordinating across time zones with an overseas contract manufacturer.</li>
-                <li>Devised a creative overpackaging solution that prevented shipping damage while avoiding expensive verification testing and new part numbers.</li>
-                <li>Traveled on-site to international contract manufacturers, often on short notice, to support builds, supplier readiness, and design-verification closure.</li>
-                <li>Created supplier management-of-change questionnaire forms adopted across the team; mentored colleagues on inspection methods.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="role">
-        <button class="role-head" aria-expanded="false">
-          <span class="role-date">2021 — 2022</span>
-          <span><span class="role-title">Quality Engineer — Verification &amp; Validation</span><span class="role-org">Medtronic · Contract</span></span>
-          <span class="role-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="role-body">
-          <div class="role-body-inner">
-            <div class="role-spacer"></div>
-            <div>
-              <p class="role-summary">Hands-on quality engineering in a regulated V&amp;V environment.</p>
-              <ul class="bullets">
-                <li>Conducted failure analysis on returned neuro-implantable products and developed test methods to validate the analysis procedures.</li>
-                <li>Executed software installation, verification, and equipment validation for compliant introduction to technicians.</li>
-                <li>Built and executed qualification protocols and work instructions; validated quality instruments for attribute and variable characteristics of implantable devices.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="role">
-        <button class="role-head" aria-expanded="false">
-          <span class="role-date">2018 — 2020</span>
-          <span><span class="role-title">Manufacturing Engineer · Engineer Technician IV</span><span class="role-org">Merit Medical Systems, Inc.</span></span>
-          <span class="role-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="role-body">
-          <div class="role-body-inner">
-            <div class="role-spacer"></div>
-            <div>
-              <p class="role-summary">Learned quality from the build side — making the parts, not just auditing them.</p>
-              <ul class="bullets">
-                <li>Generated and executed IQ/OQ/PQ for new equipment and processes per 21 CFR Part 820 and ISO 13485.</li>
-                <li>Designed production-aid devices and fixtures that reduced scrap and increased line productivity.</li>
-                <li>Operated extruders and analyzed resin moisture to maintain material quality; held tight tolerances in precision cutting.</li>
-                <li>Generated and routed Engineering Change Notifications (ECNs) for controlled documentation.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="role">
-        <button class="role-head" aria-expanded="false">
-          <span class="role-date">2013 — 2018</span>
-          <span><span class="role-title">Earlier — Welding, Fabrication &amp; STEM Mentoring</span><span class="role-org">Foundations: craftsmanship, communication, leadership</span></span>
-          <span class="role-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="role-body">
-          <div class="role-body-inner">
-            <div class="role-spacer"></div>
-            <div>
-              <p class="role-summary">The work that built the character behind the engineering.</p>
-              <ul class="bullets">
-                <li><strong>Welder &amp; fabrication:</strong> operated welding and grinding equipment safely and precisely; coordinated with vendors and metal suppliers to reduce lead time — first exposure to the supplier relationships I now manage.</li>
-                <li><strong>STEM mentoring &amp; tutoring:</strong> led individualized sessions that improved student test scores by an average of 60%, building the patience, listening, and clear-communication skills behind every good supplier conversation.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<span class="eyebrow"><span class="t-en">Experience</span><span class="t-vi">Kinh nghiệm</span></span>
+<h2><span class="t-en">A climb through quality &amp; manufacturing.</span><span class="t-vi">Hành trình đi lên qua chất lượng &amp; sản xuất.</span></h2>
+<p><span class="t-en">Tap any role to expand. Internal program and supplier names have been generalized.</span><span class="t-vi">Nhấn vào bất kỳ vị trí nào để mở rộng. Tên chương trình và nhà cung cấp nội bộ đã được khái quát hóa.</span></p>
+</div>
+<div class="timeline reveal">
+<div class="role">
+<button aria-expanded="false" class="role-head">
+<span class="role-date"><span class="t-en">2025 — Present</span><span class="t-vi">2025 — Hiện tại</span></span>
+<span><span class="role-title"><span class="t-en">Senior Supplier Quality Engineer</span><span class="t-vi">Kỹ sư Chất lượng Nhà cung cấp Cấp cao</span></span><span class="role-org"><span class="t-en">Medtronic · Cardiac Ablation Solutions</span><span class="t-vi">Medtronic · Cardiac Ablation Solutions</span></span></span>
+<span aria-hidden="true" class="role-toggle">+</span>
+</button>
+<div class="role-body">
+<div class="role-body-inner">
+<div class="role-spacer"></div>
+<div>
+<p class="role-summary"><span class="t-en">Lead supplier quality and compliance for medical-device production under FDA 21 CFR Part 820 and ISO 13485.</span><span class="t-vi">Dẫn dắt chất lượng và tuân thủ của nhà cung cấp cho hoạt động sản xuất thiết bị y tế theo FDA 21 CFR Part 820 và ISO 13485.</span></p>
+<ul class="bullets">
+<li><span class="t-en">Lead supplier quality across multiple suppliers and contract manufacturers, ensuring sustained regulatory compliance.</span><span class="t-vi">Dẫn dắt chất lượng nhà cung cấp trên nhiều nhà cung cấp và nhà sản xuất hợp đồng, bảo đảm tuân thủ quy định một cách bền vững.</span></li>
+<li><span class="t-en">Led the supplier-quality response to a critical foreign-material investigation — corrective actions, direct supplier partnership, and on-site lab work — recognized at the VP level; the catch and quick remediation realized ~$80K in immediate scrap savings while averting the far larger cost of the defect reaching production.</span><span class="t-vi">Dẫn dắt phản ứng chất lượng nhà cung cấp cho một cuộc điều tra vật liệu lạ nghiêm trọng — hành động khắc phục, hợp tác trực tiếp với nhà cung cấp và làm việc tại phòng thí nghiệm hiện trường — được ghi nhận ở cấp Phó Chủ tịch; việc phát hiện và khắc phục nhanh giúp tiết kiệm ngay khoảng 80.000 USD phế phẩm, đồng thời tránh được chi phí lớn hơn nhiều nếu lỗi lọt vào sản xuất.</span></li>
+<li><span class="t-en">Drove the operating unit's first full product through PPAP, establishing tight supplier controls while managing a contract manufacturer through significant challenges.</span><span class="t-vi">Đưa sản phẩm hoàn chỉnh đầu tiên của đơn vị vận hành qua quy trình PPAP, thiết lập các biện pháp kiểm soát nhà cung cấp chặt chẽ trong khi quản lý một nhà sản xuất hợp đồng vượt qua nhiều thử thách đáng kể.</span></li>
+<li><span class="t-en">Lead daily process-validation (OQ/PQ) meetings with a contract manufacturer, coaching the supplier toward faster, higher-quality results.</span><span class="t-vi">Chủ trì các cuộc họp thẩm định quy trình (OQ/PQ) hằng ngày với một nhà sản xuất hợp đồng, huấn luyện nhà cung cấp hướng tới kết quả nhanh hơn và chất lượng cao hơn.</span></li>
+<li><span class="t-en">Caught and corrected an error in a tolerance-interval analysis during PPAP review using applied statistics, then documented the learnings as reusable guidance for the team.</span><span class="t-vi">Phát hiện và sửa một lỗi trong phân tích khoảng dung sai khi xét duyệt PPAP bằng thống kê ứng dụng, sau đó ghi lại bài học thành hướng dẫn tái sử dụng cho cả nhóm.</span></li>
+<li><span class="t-en">Closed high-priority supplier change orders in record turnaround to clear backorders and protect shipment schedules.</span><span class="t-vi">Đóng các đơn thay đổi nhà cung cấp ưu tiên cao với thời gian xử lý kỷ lục để giải quyết đơn hàng tồn và bảo vệ tiến độ giao hàng.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="role">
+<button aria-expanded="false" class="role-head">
+<span class="role-date"><span class="t-en">2022 — 2025</span><span class="t-vi">2022 — 2025</span></span>
+<span><span class="role-title"><span class="t-en">Supplier Quality Engineer</span><span class="t-vi">Kỹ sư Chất lượng Nhà cung cấp</span></span><span class="role-org"><span class="t-en">Medtronic</span><span class="t-vi">Medtronic</span></span></span>
+<span aria-hidden="true" class="role-toggle">+</span>
+</button>
+<div class="role-body">
+<div class="role-body-inner">
+<div class="role-spacer"></div>
+<div>
+<p class="role-summary"><span class="t-en">Owned supplier quality for the components and materials feeding medical-device production.</span><span class="t-vi">Sở hữu toàn bộ chất lượng nhà cung cấp cho các linh kiện và vật liệu phục vụ sản xuất thiết bị y tế.</span></p>
+<ul class="bullets">
+<li><span class="t-en">Contributed as SQE to a cross-functional team on a ~2-year manufacturing transfer that closed all PPAP deliverables and passed the external certification audit with zero findings — a seamless transfer by company standards.</span><span class="t-vi">Đóng góp với vai trò SQE trong một nhóm liên chức năng cho đợt chuyển giao sản xuất kéo dài ~2 năm, hoàn tất mọi hạng mục PPAP và vượt qua đợt đánh giá chứng nhận bên ngoài với không một phát hiện nào — một cuộc chuyển giao suôn sẻ theo tiêu chuẩn của công ty.</span></li>
+<li><span class="t-en">Helped design a transfer strategy that avoided an estimated ~$500K in projected costs by using a business-process approach instead of a costly IT build; supported a cross-functional Kaizen and risk-based gap closure.</span><span class="t-vi">Góp phần thiết kế một chiến lược chuyển giao giúp tránh khoảng 500.000 USD chi phí dự kiến bằng cách dùng cách tiếp cận theo quy trình nghiệp vụ thay vì một dự án CNTT tốn kém; hỗ trợ một buổi Kaizen liên chức năng và đóng khoảng trống dựa trên rủi ro.</span></li>
+<li><span class="t-en">Supported a global regulatory launch, helping release 12+ product GTINs through implementation and a legal manufacturing change — coordinating across time zones with an overseas contract manufacturer.</span><span class="t-vi">Hỗ trợ một đợt ra mắt theo quy định trên phạm vi toàn cầu, giúp phát hành hơn 12 mã sản phẩm (GTIN) thông qua triển khai và một thay đổi sản xuất hợp pháp — phối hợp qua nhiều múi giờ với một nhà sản xuất hợp đồng ở nước ngoài.</span></li>
+<li><span class="t-en">Devised a creative overpackaging solution that prevented shipping damage while avoiding expensive verification testing and new part numbers.</span><span class="t-vi">Đưa ra một giải pháp đóng gói bổ sung sáng tạo giúp ngăn hư hỏng khi vận chuyển, đồng thời tránh được các phép thử kiểm tra tốn kém và việc tạo mã linh kiện mới.</span></li>
+<li><span class="t-en">Traveled on-site to international contract manufacturers, often on short notice, to support builds, supplier readiness, and design-verification closure.</span><span class="t-vi">Đi công tác trực tiếp đến các nhà sản xuất hợp đồng quốc tế, thường là gấp, để hỗ trợ chế tạo, sự sẵn sàng của nhà cung cấp và việc hoàn tất kiểm tra thiết kế.</span></li>
+<li><span class="t-en">Created supplier management-of-change questionnaire forms adopted across the team; mentored colleagues on inspection methods.</span><span class="t-vi">Xây dựng các biểu mẫu bảng câu hỏi quản lý thay đổi (MOC) của nhà cung cấp được cả nhóm áp dụng; cố vấn cho đồng nghiệp về các phương pháp kiểm tra.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="role">
+<button aria-expanded="false" class="role-head">
+<span class="role-date"><span class="t-en">2021 — 2022</span><span class="t-vi">2021 — 2022</span></span>
+<span><span class="role-title"><span class="t-en">Quality Engineer — Verification &amp; Validation</span><span class="t-vi">Kỹ sư Chất lượng — Kiểm tra &amp; Thẩm định (V&amp;V)</span></span><span class="role-org"><span class="t-en">Medtronic · Contract</span><span class="t-vi">Medtronic · Hợp đồng</span></span></span>
+<span aria-hidden="true" class="role-toggle">+</span>
+</button>
+<div class="role-body">
+<div class="role-body-inner">
+<div class="role-spacer"></div>
+<div>
+<p class="role-summary"><span class="t-en">Hands-on quality engineering in a regulated V&amp;V environment.</span><span class="t-vi">Kỹ thuật chất lượng thực hành trong môi trường V&amp;V được quản lý chặt chẽ.</span></p>
+<ul class="bullets">
+<li><span class="t-en">Conducted failure analysis on returned neuro-implantable products and developed test methods to validate the analysis procedures.</span><span class="t-vi">Thực hiện phân tích lỗi trên các sản phẩm cấy ghép thần kinh được trả về và phát triển phương pháp kiểm tra để thẩm định quy trình phân tích.</span></li>
+<li><span class="t-en">Executed software installation, verification, and equipment validation for compliant introduction to technicians.</span><span class="t-vi">Thực hiện cài đặt phần mềm, kiểm tra và thẩm định thiết bị để đưa vào sử dụng đúng chuẩn cho kỹ thuật viên.</span></li>
+<li><span class="t-en">Built and executed qualification protocols and work instructions; validated quality instruments for attribute and variable characteristics of implantable devices.</span><span class="t-vi">Xây dựng và thực hiện các quy trình xác nhận cùng hướng dẫn công việc; thẩm định các thiết bị đo chất lượng cho các đặc tính định tính và định lượng của thiết bị cấy ghép.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="role">
+<button aria-expanded="false" class="role-head">
+<span class="role-date"><span class="t-en">2018 — 2020</span><span class="t-vi">2018 — 2020</span></span>
+<span><span class="role-title"><span class="t-en">Manufacturing Engineer · Engineer Technician IV</span><span class="t-vi">Kỹ sư Sản xuất · Kỹ thuật viên Kỹ thuật IV</span></span><span class="role-org"><span class="t-en">Merit Medical Systems, Inc.</span><span class="t-vi">Merit Medical Systems, Inc.</span></span></span>
+<span aria-hidden="true" class="role-toggle">+</span>
+</button>
+<div class="role-body">
+<div class="role-body-inner">
+<div class="role-spacer"></div>
+<div>
+<p class="role-summary"><span class="t-en">Learned quality from the build side — making the parts, not just auditing them.</span><span class="t-vi">Học về chất lượng từ phía sản xuất — trực tiếp tạo ra linh kiện, chứ không chỉ đánh giá chúng.</span></p>
+<ul class="bullets">
+<li><span class="t-en">Generated and executed IQ/OQ/PQ for new equipment and processes per 21 CFR Part 820 and ISO 13485.</span><span class="t-vi">Lập và thực hiện IQ/OQ/PQ cho thiết bị và quy trình mới theo 21 CFR Part 820 và ISO 13485.</span></li>
+<li><span class="t-en">Designed production-aid devices and fixtures that reduced scrap and increased line productivity.</span><span class="t-vi">Thiết kế các thiết bị hỗ trợ sản xuất và đồ gá giúp giảm phế phẩm và tăng năng suất dây chuyền.</span></li>
+<li><span class="t-en">Operated extruders and analyzed resin moisture to maintain material quality; held tight tolerances in precision cutting.</span><span class="t-vi">Vận hành máy đùn và phân tích độ ẩm của nhựa để giữ chất lượng vật liệu; duy trì dung sai chặt chẽ trong gia công cắt chính xác.</span></li>
+<li><span class="t-en">Generated and routed Engineering Change Notifications (ECNs) for controlled documentation.</span><span class="t-vi">Lập và trình duyệt các Thông báo Thay đổi Kỹ thuật (ECN) cho tài liệu được kiểm soát.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="role">
+<button aria-expanded="false" class="role-head">
+<span class="role-date"><span class="t-en">2013 — 2018</span><span class="t-vi">2013 — 2018</span></span>
+<span><span class="role-title"><span class="t-en">Earlier — Welding, Fabrication &amp; STEM Mentoring</span><span class="t-vi">Trước đó — Hàn, Gia công &amp; Cố vấn STEM</span></span><span class="role-org"><span class="t-en">Foundations: craftsmanship, communication, leadership</span><span class="t-vi">Nền tảng: sự khéo léo, giao tiếp, khả năng lãnh đạo</span></span></span>
+<span aria-hidden="true" class="role-toggle">+</span>
+</button>
+<div class="role-body">
+<div class="role-body-inner">
+<div class="role-spacer"></div>
+<div>
+<p class="role-summary"><span class="t-en">The work that built the character behind the engineering.</span><span class="t-vi">Công việc đã tôi luyện nên tính cách phía sau người kỹ sư.</span></p>
+<ul class="bullets">
+<li><span class="t-en"><strong>Welder &amp; fabrication:</strong> operated welding and grinding equipment safely and precisely; coordinated with vendors and metal suppliers to reduce lead time — first exposure to the supplier relationships I now manage.</span><span class="t-vi"><strong>Hàn &amp; gia công:</strong> vận hành thiết bị hàn và mài an toàn, chính xác; phối hợp với nhà cung cấp kim loại để rút ngắn thời gian giao hàng — lần đầu tiếp xúc với các mối quan hệ nhà cung cấp mà tôi quản lý ngày nay.</span></li>
+<li><span class="t-en"><strong>STEM mentoring &amp; tutoring:</strong> led individualized sessions that improved student test scores by an average of 60%, building the patience, listening, and clear-communication skills behind every good supplier conversation.</span><span class="t-vi"><strong>Cố vấn &amp; gia sư STEM:</strong> dẫn dắt các buổi học cá nhân hóa giúp cải thiện điểm kiểm tra của học sinh trung bình 60%, rèn nên sự kiên nhẫn, khả năng lắng nghe và giao tiếp rõ ràng đằng sau mọi cuộc trao đổi hiệu quả với nhà cung cấp.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="wrap"><div class="rule"></div></div>
-
 <!-- ============ RECOGNITION ============ -->
 <section id="recognition">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Recognition</span>
-      <h2>What colleagues and leaders have said.</h2>
-      <p>A selection from internal recognition I've received — from peers to the VP of Quality. Filter by theme.</p>
-    </div>
-
-    <div class="filters reveal" id="filters">
-      <button class="filter active" data-cat="all">All</button>
-      <button class="filter" data-cat="results">Results &amp; Quality</button>
-      <button class="filter" data-cat="leadership">Leadership</button>
-      <button class="filter" data-cat="technical">Technical Depth</button>
-      <button class="filter" data-cat="culture">Cross-Cultural</button>
-    </div>
-
-    <div class="rec-grid reveal" id="recGrid">
-
-      <article class="rec" data-cat="leadership results">
-        <span class="tag">Leadership</span>
-        <blockquote>"Exceptional collaboration and leadership in resolving a critical quality issue. Your efforts exemplify teamwork, innovation, and commitment to quality — going above and beyond to safeguard patient outcomes."</blockquote>
-        <div class="who">VP, Quality<span>Cardiac Ablation Solutions</span></div>
-      </article>
-
-      <article class="rec" data-cat="results">
-        <span class="tag">Results</span>
-        <blockquote>"Drove toward the best quality outcomes while meeting business commitments — a creative approach that reduced risk and avoided an estimated $500K in project costs."</blockquote>
-        <div class="who">Director, Quality Program Management</div>
-      </article>
-
-      <article class="rec" data-cat="results">
-        <span class="tag">Results</span>
-        <blockquote>"An external certification audit concluded with no findings. Great audit results don't happen by accident — they're the result of the rigor put into the documentation early in the program."</blockquote>
-        <div class="who">Senior Manager, Supplier Quality</div>
-      </article>
-
-      <article class="rec" data-cat="culture">
-        <span class="tag">Cross-Cultural</span>
-        <blockquote>"Thank you for leading our team session sharing your travel experience in Vietnam and cross-cultural differences. There was great interaction from the audience, and you set a high bar for the quality of the material."</blockquote>
-        <div class="who">Senior Manager</div>
-      </article>
-
-      <article class="rec" data-cat="technical">
-        <span class="tag">Technical Depth</span>
-        <blockquote>"Identified an error in a tolerance-interval analysis during review, demonstrated deep understanding of statistics and data transformation, and wrote up clear lessons for the whole team to apply to future projects."</blockquote>
-        <div class="who">Quality Engineer (peer)</div>
-      </article>
-
-      <article class="rec" data-cat="leadership">
-        <span class="tag">Leadership</span>
-        <blockquote>"Your leadership in the daily process-validation meetings kept the team accountable with an open line of communication — delivering faster results and teaching the supplier better ways of working."</blockquote>
-        <div class="who">Senior Engineering Manager</div>
-      </article>
-
-      <article class="rec" data-cat="results">
-        <span class="tag">Results</span>
-        <blockquote>"An amazing accomplishment getting the first full product under PPAP across the finish line — navigating new processes and putting tight supplier controls in place for the benefit of patients."</blockquote>
-        <div class="who">Program Director</div>
-      </article>
-
-      <article class="rec" data-cat="results leadership">
-        <span class="tag">Results</span>
-        <blockquote>"Closed process validations with flexibility, creativity, and intelligent risk-taking — always with compliance and patient safety in mind — by engaging and coaching the supplier team. A major milestone that paved the way for a smooth launch."</blockquote>
-        <div class="who">Senior Manager, Supplier Quality</div>
-      </article>
-
-      <article class="rec" data-cat="results">
-        <span class="tag">Results</span>
-        <blockquote>"Attention to detail, commitment to accuracy, and a collaborative spirit were instrumental in a successful external audit — a direct reflection of excellence and teamwork."</blockquote>
-        <div class="who">Director, Quality Systems</div>
-      </article>
-
-      <article class="rec" data-cat="technical">
-        <span class="tag">Technical Depth</span>
-        <blockquote>"A thorough on-site assessment identified multiple improvements that will be made across the packaging line — a critical deliverable for our root-cause analysis."</blockquote>
-        <div class="who">Senior Engineering Manager, Operations</div>
-      </article>
-
-      <article class="rec" data-cat="leadership">
-        <span class="tag">Mentorship</span>
-        <blockquote>"Thank you for your patience walking me through your analysis. Your expertise helped me understand how to do the task more efficiently."</blockquote>
-        <div class="who">Quality Engineering Manager</div>
-      </article>
-
-      <article class="rec" data-cat="results">
-        <span class="tag">Results</span>
-        <blockquote>"A creative overpackaging solution allowed simple implementation without expensive verification testing or new part numbers — saving time and resources while preventing shipping damage."</blockquote>
-        <div class="who">Senior Program Manager</div>
-      </article>
-
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<span class="eyebrow"><span class="t-en">Recognition</span><span class="t-vi">Ghi nhận</span></span>
+<h2><span class="t-en">What colleagues and leaders have said.</span><span class="t-vi">Điều đồng nghiệp và lãnh đạo đã nói.</span></h2>
+<p><span class="t-en">A selection from internal recognition I've received — from peers to the VP of Quality. Filter by theme.</span><span class="t-vi">Một số ghi nhận nội bộ tôi đã nhận được — từ đồng nghiệp đến Phó Chủ tịch phụ trách Chất lượng. Lọc theo chủ đề.</span></p>
+</div>
+<div class="filters reveal" id="filters">
+<button class="filter active" data-cat="all"><span class="t-en">All</span><span class="t-vi">Tất cả</span></button>
+<button class="filter" data-cat="results"><span class="t-en">Results &amp; Quality</span><span class="t-vi">Kết quả &amp; Chất lượng</span></button>
+<button class="filter" data-cat="leadership"><span class="t-en">Leadership</span><span class="t-vi">Lãnh đạo</span></button>
+<button class="filter" data-cat="technical"><span class="t-en">Technical Depth</span><span class="t-vi">Chuyên môn</span></button>
+<button class="filter" data-cat="culture"><span class="t-en">Cross-Cultural</span><span class="t-vi">Đa văn hóa</span></button>
+</div>
+<div class="rec-grid reveal" id="recGrid">
+<article class="rec" data-cat="leadership results">
+<span class="tag"><span class="t-en">Leadership</span><span class="t-vi">Lãnh đạo</span></span>
+<blockquote><span class="t-en">"Exceptional collaboration and leadership in resolving a critical quality issue. Your efforts exemplify teamwork, innovation, and commitment to quality — going above and beyond to safeguard patient outcomes."</span><span class="t-vi">Sự hợp tác và khả năng lãnh đạo xuất sắc trong việc giải quyết một vấn đề chất lượng nghiêm trọng. Nỗ lực của bạn thể hiện tinh thần đồng đội, sáng tạo và cam kết với chất lượng — làm hơn cả mong đợi để bảo vệ kết quả điều trị cho bệnh nhân.</span></blockquote>
+<div class="who"><span class="t-en">VP, Quality<span>Cardiac Ablation Solutions</span></span><span class="t-vi">Phó Chủ tịch, Chất lượng<span>Cardiac Ablation Solutions</span></span></div>
+</article>
+<article class="rec" data-cat="results">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"Drove toward the best quality outcomes while meeting business commitments — a creative approach that reduced risk and avoided an estimated $500K in project costs."</span><span class="t-vi">Hướng tới kết quả chất lượng tốt nhất trong khi vẫn đáp ứng các cam kết kinh doanh — một cách tiếp cận sáng tạo giúp giảm rủi ro và tránh khoảng 500.000 USD chi phí dự án.</span></blockquote>
+<div class="who"><span class="t-en">Director, Quality Program Management</span><span class="t-vi">Giám đốc, Quản lý Chương trình Chất lượng</span></div>
+</article>
+<article class="rec" data-cat="results">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"An external certification audit concluded with no findings. Great audit results don't happen by accident — they're the result of the rigor put into the documentation early in the program."</span><span class="t-vi">Một đợt đánh giá chứng nhận bên ngoài kết thúc mà không có phát hiện nào. Kết quả đánh giá tốt không đến một cách tình cờ — đó là thành quả của sự nghiêm cẩn đặt vào tài liệu ngay từ đầu chương trình.</span></blockquote>
+<div class="who"><span class="t-en">Senior Manager, Supplier Quality</span><span class="t-vi">Quản lý Cấp cao, Chất lượng Nhà cung cấp</span></div>
+</article>
+<article class="rec" data-cat="culture">
+<span class="tag"><span class="t-en">Cross-Cultural</span><span class="t-vi">Đa văn hóa</span></span>
+<blockquote><span class="t-en">"Thank you for leading our team session sharing your travel experience in Vietnam and cross-cultural differences. There was great interaction from the audience, and you set a high bar for the quality of the material."</span><span class="t-vi">Cảm ơn bạn đã dẫn dắt buổi chia sẻ của nhóm về trải nghiệm du lịch Việt Nam và những khác biệt văn hóa. Khán giả tương tác rất sôi nổi, và bạn đã đặt ra một chuẩn mực cao cho chất lượng nội dung.</span></blockquote>
+<div class="who"><span class="t-en">Senior Manager</span><span class="t-vi">Quản lý Cấp cao</span></div>
+</article>
+<article class="rec" data-cat="technical">
+<span class="tag"><span class="t-en">Technical Depth</span><span class="t-vi">Chuyên môn</span></span>
+<blockquote><span class="t-en">"Identified an error in a tolerance-interval analysis during review, demonstrated deep understanding of statistics and data transformation, and wrote up clear lessons for the whole team to apply to future projects."</span><span class="t-vi">Phát hiện một lỗi trong phân tích khoảng dung sai khi xét duyệt, thể hiện sự hiểu biết sâu về thống kê và biến đổi dữ liệu, và ghi lại những bài học rõ ràng để cả nhóm áp dụng cho các dự án sau.</span></blockquote>
+<div class="who"><span class="t-en">Quality Engineer (peer)</span><span class="t-vi">Kỹ sư Chất lượng (đồng nghiệp)</span></div>
+</article>
+<article class="rec" data-cat="leadership">
+<span class="tag"><span class="t-en">Leadership</span><span class="t-vi">Lãnh đạo</span></span>
+<blockquote><span class="t-en">"Your leadership in the daily process-validation meetings kept the team accountable with an open line of communication — delivering faster results and teaching the supplier better ways of working."</span><span class="t-vi">Khả năng lãnh đạo của bạn trong các cuộc họp thẩm định quy trình hằng ngày giúp cả nhóm giữ trách nhiệm với một kênh trao đổi cởi mở — mang lại kết quả nhanh hơn và chỉ cho nhà cung cấp những cách làm việc tốt hơn.</span></blockquote>
+<div class="who"><span class="t-en">Senior Engineering Manager</span><span class="t-vi">Quản lý Kỹ thuật Cấp cao</span></div>
+</article>
+<article class="rec" data-cat="results">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"An amazing accomplishment getting the first full product under PPAP across the finish line — navigating new processes and putting tight supplier controls in place for the benefit of patients."</span><span class="t-vi">Một thành tựu tuyệt vời khi đưa sản phẩm hoàn chỉnh đầu tiên qua PPAP về đích — làm chủ các quy trình mới và thiết lập những biện pháp kiểm soát nhà cung cấp chặt chẽ vì lợi ích của bệnh nhân.</span></blockquote>
+<div class="who"><span class="t-en">Program Director</span><span class="t-vi">Giám đốc Chương trình</span></div>
+</article>
+<article class="rec" data-cat="results leadership">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"Closed process validations with flexibility, creativity, and intelligent risk-taking — always with compliance and patient safety in mind — by engaging and coaching the supplier team. A major milestone that paved the way for a smooth launch."</span><span class="t-vi">Hoàn tất các đợt thẩm định quy trình với sự linh hoạt, sáng tạo và dám chấp nhận rủi ro một cách thông minh — luôn đặt sự tuân thủ và an toàn bệnh nhân lên hàng đầu — bằng cách gắn kết và huấn luyện đội ngũ nhà cung cấp. Một cột mốc quan trọng mở đường cho một đợt ra mắt suôn sẻ.</span></blockquote>
+<div class="who"><span class="t-en">Senior Manager, Supplier Quality</span><span class="t-vi">Quản lý Cấp cao, Chất lượng Nhà cung cấp</span></div>
+</article>
+<article class="rec" data-cat="results">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"Attention to detail, commitment to accuracy, and a collaborative spirit were instrumental in a successful external audit — a direct reflection of excellence and teamwork."</span><span class="t-vi">Sự tỉ mỉ, cam kết với độ chính xác và tinh thần hợp tác đã đóng vai trò then chốt trong một đợt đánh giá bên ngoài thành công — phản ánh trực tiếp sự xuất sắc và tinh thần đồng đội.</span></blockquote>
+<div class="who"><span class="t-en">Director, Quality Systems</span><span class="t-vi">Giám đốc, Hệ thống Chất lượng</span></div>
+</article>
+<article class="rec" data-cat="technical">
+<span class="tag"><span class="t-en">Technical Depth</span><span class="t-vi">Chuyên môn</span></span>
+<blockquote><span class="t-en">"A thorough on-site assessment identified multiple improvements that will be made across the packaging line — a critical deliverable for our root-cause analysis."</span><span class="t-vi">Một đợt đánh giá kỹ lưỡng tại hiện trường đã xác định nhiều cải tiến sẽ được thực hiện trên toàn dây chuyền đóng gói — một hạng mục then chốt cho phân tích nguyên nhân gốc của chúng tôi.</span></blockquote>
+<div class="who"><span class="t-en">Senior Engineering Manager, Operations</span><span class="t-vi">Quản lý Kỹ thuật Cấp cao, Vận hành</span></div>
+</article>
+<article class="rec" data-cat="leadership">
+<span class="tag"><span class="t-en">Mentorship</span><span class="t-vi">Cố vấn</span></span>
+<blockquote><span class="t-en">"Thank you for your patience walking me through your analysis. Your expertise helped me understand how to do the task more efficiently."</span><span class="t-vi">Cảm ơn sự kiên nhẫn của bạn khi hướng dẫn tôi qua phần phân tích. Chuyên môn của bạn đã giúp tôi hiểu cách thực hiện công việc hiệu quả hơn.</span></blockquote>
+<div class="who"><span class="t-en">Quality Engineering Manager</span><span class="t-vi">Quản lý Kỹ thuật Chất lượng</span></div>
+</article>
+<article class="rec" data-cat="results">
+<span class="tag"><span class="t-en">Results</span><span class="t-vi">Kết quả</span></span>
+<blockquote><span class="t-en">"A creative overpackaging solution allowed simple implementation without expensive verification testing or new part numbers — saving time and resources while preventing shipping damage."</span><span class="t-vi">Một giải pháp đóng gói bổ sung sáng tạo cho phép triển khai đơn giản mà không cần các phép thử kiểm tra tốn kém hay mã linh kiện mới — tiết kiệm thời gian, nguồn lực và ngăn hư hỏng khi vận chuyển.</span></blockquote>
+<div class="who"><span class="t-en">Senior Program Manager</span><span class="t-vi">Quản lý Chương trình Cấp cao</span></div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ============ EDUCATION & SKILLS ============ -->
 <section id="education">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Education &amp; Capabilities</span>
-      <h2>The foundation, and the toolkit.</h2>
-    </div>
-    <div class="two-col">
-      <div class="reveal">
-        <div class="edu-card">
-          <h3>University of Houston</h3>
-          <p class="sub">B.S. — Mechanical Engineering</p>
-          <p class="when">2012 — 2016 · GPA 3.38</p>
-          <div class="edu-detail">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="eyebrow"><span class="t-en">Education &amp; Capabilities</span><span class="t-vi">Học vấn &amp; Năng lực</span></span>
+<h2><span class="t-en">The foundation, and the toolkit.</span><span class="t-vi">Nền tảng, và bộ công cụ.</span></h2>
+</div>
+<div class="two-col">
+<div class="reveal">
+<div class="edu-card">
+<h3><span class="t-en">University of Houston</span><span class="t-vi">University of Houston</span></h3>
+<p class="sub"><span class="t-en">B.S. — Mechanical Engineering</span><span class="t-vi">Cử nhân Khoa học — Kỹ thuật Cơ khí</span></p>
+<p class="when"><span class="t-en">2012 — 2016 · GPA 3.38</span><span class="t-vi">2012 — 2016 · GPA 3.38</span></p>
+<div class="edu-detail"><span class="t-en">
             Focused on design, materials, and manufacturing. Completed a senior design project building a working thermal-therapy medical-device prototype, and passed the Fundamentals of Engineering (FE) exam.
-            <div class="chips">
-              <span class="mini-chip">FE exam — passed</span>
-              <span class="mini-chip">Pi Tau Sigma (ME honor society)</span>
-              <span class="mini-chip">ASME — Event Committee Lead</span>
-              <span class="mini-chip">Vietnamese Student Association</span>
-              <span class="mini-chip">Hallyu Club — President</span>
-            </div>
-          </div>
-        </div>
-        <div class="edu-card">
-          <h3>Engineer-in-Training (EIT)</h3>
-          <p class="sub">Texas Board of Professional Engineers</p>
-          <p class="when">Issued 2017</p>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <div class="skill-group">
-          <h4>Quality &amp; Compliance</h4>
-          <div class="chips">
-            <span class="chip">Supplier Quality</span><span class="chip">ISO 13485</span><span class="chip">21 CFR Part 820</span><span class="chip">QMS</span><span class="chip">CAPA</span><span class="chip">Non-Conformance (SCR/SCC)</span><span class="chip">Design Controls</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Supplier &amp; Process</h4>
-          <div class="chips">
-            <span class="chip">Supplier Audits</span><span class="chip">Supplier GEMBA</span><span class="chip">PPAP</span><span class="chip">First Article Inspection</span><span class="chip">Supplier Development</span><span class="chip">Manufacturing Transfer</span><span class="chip">Management of Change</span><span class="chip">Contract Mfg. Management</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Validation &amp; Technical</h4>
-          <div class="chips">
-            <span class="chip">IQ / OQ / PQ</span><span class="chip">Verification &amp; Validation</span><span class="chip">Test Method Validation</span><span class="chip">Design Verification</span><span class="chip">Failure Analysis</span><span class="chip">Root Cause Analysis</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Methods &amp; Analytics</h4>
-          <div class="chips">
-            <span class="chip">Applied Statistics</span><span class="chip">Tolerance Interval Analysis</span><span class="chip">Six Sigma</span><span class="chip">FMEA</span><span class="chip">8D</span><span class="chip">Kaizen</span><span class="chip">GD&amp;T</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Bridge</h4>
-          <div class="chips">
-            <span class="chip">Bilingual EN / VN</span><span class="chip">Cross-Cultural Communication</span><span class="chip">Global Supplier Management</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            </span><span class="t-vi">Tập trung vào thiết kế, vật liệu và sản xuất. Hoàn thành đồ án tốt nghiệp chế tạo một nguyên mẫu thiết bị y tế trị liệu nhiệt hoạt động được, và đã thi đậu kỳ thi Nền tảng Kỹ thuật (FE).</span><div class="chips">
+<span class="mini-chip"><span class="t-en">FE exam — passed</span><span class="t-vi">Thi FE — đạt</span></span>
+<span class="mini-chip"><span class="t-en">Pi Tau Sigma (ME honor society)</span><span class="t-vi">Pi Tau Sigma (hội danh dự ngành Cơ khí)</span></span>
+<span class="mini-chip"><span class="t-en">ASME — Event Committee Lead</span><span class="t-vi">ASME — Trưởng Ban Sự kiện</span></span>
+<span class="mini-chip"><span class="t-en">Vietnamese Student Association</span><span class="t-vi">Hội Sinh viên Việt Nam</span></span>
+<span class="mini-chip"><span class="t-en">Hallyu Club — President</span><span class="t-vi">CLB Hallyu — Chủ tịch</span></span>
+</div>
+</div>
+</div>
+<div class="edu-card">
+<h3><span class="t-en">Engineer-in-Training (EIT)</span><span class="t-vi">Kỹ sư Tập sự (EIT)</span></h3>
+<p class="sub"><span class="t-en">Texas Board of Professional Engineers</span><span class="t-vi">Hội đồng Kỹ sư Chuyên nghiệp Bang Texas</span></p>
+<p class="when"><span class="t-en">Issued 2017</span><span class="t-vi">Cấp năm 2017</span></p>
+</div>
+</div>
+<div class="reveal">
+<div class="skill-group">
+<h4><span class="t-en">Quality &amp; Compliance</span><span class="t-vi">Chất lượng &amp; Tuân thủ</span></h4>
+<div class="chips">
+<span class="chip"><span class="t-en">Supplier Quality</span><span class="t-vi">Chất lượng Nhà cung cấp</span></span><span class="chip">ISO 13485</span><span class="chip">21 CFR Part 820</span><span class="chip">QMS</span><span class="chip">CAPA</span><span class="chip"><span class="t-en">Non-Conformance (SCR/SCC)</span><span class="t-vi">Không phù hợp (SCR/SCC)</span></span><span class="chip"><span class="t-en">Design Controls</span><span class="t-vi">Kiểm soát Thiết kế</span></span>
+</div>
+</div>
+<div class="skill-group">
+<h4><span class="t-en">Supplier &amp; Process</span><span class="t-vi">Nhà cung cấp &amp; Quy trình</span></h4>
+<div class="chips">
+<span class="chip"><span class="t-en">Supplier Audits</span><span class="t-vi">Đánh giá Nhà cung cấp</span></span><span class="chip"><span class="t-en">Supplier GEMBA</span><span class="t-vi">GEMBA Nhà cung cấp</span></span><span class="chip">PPAP</span><span class="chip"><span class="t-en">First Article Inspection</span><span class="t-vi">Kiểm tra Mẫu Đầu (FAI)</span></span><span class="chip"><span class="t-en">Supplier Development</span><span class="t-vi">Phát triển Nhà cung cấp</span></span><span class="chip"><span class="t-en">Manufacturing Transfer</span><span class="t-vi">Chuyển giao Sản xuất</span></span><span class="chip"><span class="t-en">Management of Change</span><span class="t-vi">Quản lý Thay đổi</span></span><span class="chip"><span class="t-en">Contract Mfg. Management</span><span class="t-vi">Quản lý NSX Hợp đồng</span></span>
+</div>
+</div>
+<div class="skill-group">
+<h4><span class="t-en">Validation &amp; Technical</span><span class="t-vi">Thẩm định &amp; Kỹ thuật</span></h4>
+<div class="chips">
+<span class="chip">IQ / OQ / PQ</span><span class="chip"><span class="t-en">Verification &amp; Validation</span><span class="t-vi">Kiểm tra &amp; Thẩm định</span></span><span class="chip"><span class="t-en">Test Method Validation</span><span class="t-vi">Thẩm định Phương pháp Kiểm tra</span></span><span class="chip"><span class="t-en">Design Verification</span><span class="t-vi">Kiểm tra Thiết kế</span></span><span class="chip"><span class="t-en">Failure Analysis</span><span class="t-vi">Phân tích Lỗi</span></span><span class="chip"><span class="t-en">Root Cause Analysis</span><span class="t-vi">Phân tích Nguyên nhân Gốc</span></span>
+</div>
+</div>
+<div class="skill-group">
+<h4><span class="t-en">Methods &amp; Analytics</span><span class="t-vi">Phương pháp &amp; Phân tích</span></h4>
+<div class="chips">
+<span class="chip"><span class="t-en">Applied Statistics</span><span class="t-vi">Thống kê Ứng dụng</span></span><span class="chip"><span class="t-en">Tolerance Interval Analysis</span><span class="t-vi">Phân tích Khoảng Dung sai</span></span><span class="chip">Six Sigma</span><span class="chip">FMEA</span><span class="chip">8D</span><span class="chip">Kaizen</span><span class="chip">GD&amp;T</span>
+</div>
+</div>
+<div class="skill-group">
+<h4><span class="t-en">Bridge</span><span class="t-vi">Cầu nối</span></h4>
+<div class="chips">
+<span class="chip"><span class="t-en">Bilingual EN / VN</span><span class="t-vi">Song ngữ Anh / Việt</span></span><span class="chip"><span class="t-en">Cross-Cultural Communication</span><span class="t-vi">Giao tiếp Đa văn hóa</span></span><span class="chip"><span class="t-en">Global Supplier Management</span><span class="t-vi">Quản lý Nhà cung cấp Toàn cầu</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="wrap"><div class="rule"></div></div>
-
 <!-- ============ COMMUNITY ============ -->
 <section id="volunteering">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Community</span>
-      <h2>Showing up beyond the job.</h2>
-    </div>
-    <div class="vol-grid reveal">
-      <div class="vol-text">
-        <p>Most recently, I joined my company's volunteers for our annual meal-packing day with <strong>Meals from the Heart</strong> — hairnets on, scooping and sealing bag after bag of meals headed to neighbors facing hunger.</p>
-        <p>I also serve as a career advisor for high-school students — through my employer and a regional Chamber of Commerce program — mentoring them on what a corporate career actually looks like, reviewing résumés, and helping them think through degree and field choices. It connects back to where I started: years of one-on-one STEM mentoring. Helping someone see that a technical career is within reach is its own kind of quality work.</p>
-      </div>
-      <div class="photo-row">
-        <div class="photo"><img src="images/community-1.jpg" alt="Meals from the Heart volunteering" onerror="this.remove()"><div class="ph-label">images/community-1.jpg<br>— Meals from the Heart —</div></div>
-        <div class="photo"><img src="images/community-2.jpg" alt="Meals from the Heart volunteering" onerror="this.remove()"><div class="ph-label">images/community-2.jpg<br>— meal-packing team —</div></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<span class="eyebrow"><span class="t-en">Community</span><span class="t-vi">Cộng đồng</span></span>
+<h2><span class="t-en">Showing up beyond the job.</span><span class="t-vi">Cống hiến ngoài công việc.</span></h2>
+</div>
+<div class="vol-grid reveal">
+<div class="vol-text">
+<p><span class="t-en">Most recently, I joined my company's volunteers for our annual meal-packing day with <strong>Meals from the Heart</strong> — hairnets on, scooping and sealing bag after bag of meals headed to neighbors facing hunger.</span><span class="t-vi">Gần đây nhất, tôi đã cùng các tình nguyện viên của công ty tham gia ngày đóng gói bữa ăn thường niên với <strong>Meals from the Heart</strong> — đội mũ trùm tóc, múc và niêm phong hết túi này đến túi khác những bữa ăn dành cho những người hàng xóm đang thiếu ăn.</span></p>
+<p><span class="t-en">I also serve as a career advisor for high-school students — through my employer and a regional Chamber of Commerce program — mentoring them on what a corporate career actually looks like, reviewing résumés, and helping them think through degree and field choices. It connects back to where I started: years of one-on-one STEM mentoring. Helping someone see that a technical career is within reach is its own kind of quality work.</span><span class="t-vi">Tôi cũng làm cố vấn nghề nghiệp cho học sinh trung học — thông qua công ty và một chương trình của Phòng Thương mại khu vực — hướng dẫn các em về việc một sự nghiệp trong môi trường doanh nghiệp thực sự ra sao, xem xét hồ sơ (résumé), và giúp các em định hướng ngành học cùng lĩnh vực yêu thích. Điều đó gắn với nơi tôi bắt đầu: nhiều năm cố vấn STEM một-kèm-một. Giúp ai đó nhận ra rằng một sự nghiệp kỹ thuật nằm trong tầm với cũng là một dạng công việc chất lượng.</span></p>
+</div>
+<div class="photo-row">
+<div class="photo"><img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-1.jpg"/><div class="ph-label">images/community-1.jpg<br/>— Meals from the Heart —</div></div>
+<div class="photo"><img alt="Meals from the Heart volunteering" onerror="this.remove()" src="images/community-2.jpg"/><div class="ph-label">images/community-2.jpg<br/>— meal-packing team —</div></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ VIETNAM ============ -->
 <section id="vietnam">
-  <div class="wrap">
-    <div class="vn-head reveal">
-      <div class="section-head" style="margin-bottom:0">
-        <span class="eyebrow">Heritage · Việt Nam</span>
-        <h2>Where it started — and where I'm headed.</h2>
-      </div>
-      <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
-        <button class="active" data-lang="en">EN</button>
-        <button data-lang="vi">VN</button>
-      </div>
-    </div>
+<div class="wrap">
+<div class="vn-head reveal">
+<div class="section-head" style="margin-bottom:0">
+<span class="eyebrow"><span class="t-en">Heritage · Việt Nam</span><span class="t-vi">Nguồn cội · Việt Nam</span></span>
+<h2><span class="t-en">Where it started — and where I'm headed.</span><span class="t-vi">Nơi bắt đầu — và nơi tôi hướng tới.</span></h2>
+</div>
 
-    <div class="vn-body reveal">
-      <div class="vn-narrative">
-        <div data-lang="en" class="show">
-          <p>My parents left Vietnam so their children could build a different life. That sacrifice is the engine behind how I work — a drive to make it mean something, balanced by the patience and care my field demands.</p>
-          <p>I bring my culture into everything I do. And one day, I hope to bring everything I've built back home — to help others achieve great things in the place my family once had to leave.</p>
-        </div>
-        <div data-lang="vi">
-          <p>Ba mẹ tôi rời Việt Nam để các con có một cuộc đời khác. Sự hy sinh ấy là động lực cho cách tôi làm việc — một khát vọng để điều đó trở nên có ý nghĩa, cân bằng với sự kiên nhẫn và cẩn trọng mà nghề của tôi đòi hỏi.</p>
-          <p>Tôi mang văn hóa của mình vào mọi việc tôi làm. Và một ngày nào đó, tôi mong được mang tất cả những gì mình gây dựng trở về quê hương — để giúp những người khác làm nên những điều lớn lao ngay tại nơi gia đình tôi từng phải rời xa.</p>
-        </div>
-        <div class="vn-callout">
-          <span class="k">Recognized at work</span>
+</div>
+<div class="vn-body reveal">
+<div class="vn-narrative">
+<div class="" data-lang="en">
+<p>My parents left Vietnam so their children could build a different life. That sacrifice is the engine behind how I work — a drive to make it mean something, balanced by the patience and care my field demands.</p>
+<p>I bring my culture into everything I do. And one day, I hope to bring everything I've built back home — to help others achieve great things in the place my family once had to leave.</p>
+</div>
+<div data-lang="vi">
+<p>Ba mẹ tôi rời Việt Nam để các con có một cuộc đời khác. Sự hy sinh ấy là động lực cho cách tôi làm việc — một khát vọng để điều đó trở nên có ý nghĩa, cân bằng với sự kiên nhẫn và cẩn trọng mà nghề của tôi đòi hỏi.</p>
+<p>Tôi mang văn hóa của mình vào mọi việc tôi làm. Và một ngày nào đó, tôi mong được mang tất cả những gì mình gây dựng trở về quê hương — để giúp những người khác làm nên những điều lớn lao ngay tại nơi gia đình tôi từng phải rời xa.</p>
+</div>
+<div class="vn-callout">
+<span class="k"><span class="t-en">Recognized at work</span><span class="t-vi">Được ghi nhận tại nơi làm việc</span></span><span class="t-en">
           I led a culture session for my team, sharing my travels in Vietnam and the cross-cultural differences that shape how global teams work together — formally recognized by my manager for the engagement it sparked.
-        </div>
-      </div>
-      <div class="vn-gallery">
-        <div class="photo"><img src="images/vietnam-1.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-1.jpg — feature photo</div></div>
-        <div class="photo"><img src="images/vietnam-2.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-2.jpg</div></div>
-        <div class="photo"><img src="images/vietnam-3.jpg" alt="Vietnam" onerror="this.remove()"><div class="ph-label">images/vietnam-3.jpg</div></div>
-      </div>
-    </div>
-  </div>
+        </span><span class="t-vi">Tôi đã dẫn dắt một buổi chia sẻ văn hóa cho nhóm của mình, kể về những chuyến đi ở Việt Nam và những khác biệt văn hóa định hình cách các đội nhóm toàn cầu làm việc cùng nhau — được quản lý của tôi chính thức ghi nhận vì sự gắn kết mà nó tạo ra.</span></div>
+</div>
+<div class="vn-gallery">
+<div class="photo"><img alt="Vietnam" onerror="this.remove()" src="images/vietnam-1.jpg"/><div class="ph-label">images/vietnam-1.jpg — feature photo</div></div>
+<div class="photo"><img alt="Vietnam" onerror="this.remove()" src="images/vietnam-2.jpg"/><div class="ph-label">images/vietnam-2.jpg</div></div>
+<div class="photo"><img alt="Vietnam" onerror="this.remove()" src="images/vietnam-3.jpg"/><div class="ph-label">images/vietnam-3.jpg</div></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ CONTACT / FOOTER ============ -->
 <footer id="contact">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h2>Let's talk.</h2>
-        <p>Open to supplier-quality and manufacturing-quality roles in the US and with multinationals in Vietnam. In English or Vietnamese — either works.</p>
-      </div>
-      <div class="foot-links">
-        <a href="https://www.linkedin.com/in/jonathanle1227/" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span> /in/jonathanle1227</a>
-        <a href="mailto:jdle1227@gmail.com"><span class="lbl">Email</span> jdle1227@gmail.com</a>
-        <a href="Jonathan_Le_Resume.pdf" download><span class="lbl">Résumé</span> Download PDF</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© <span id="year"></span> Jonathan Le · Minneapolis, MN</span>
-      <span>Built &amp; hosted on GitHub Pages</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="foot-grid">
+<div>
+<h2><span class="t-en">Let's talk.</span><span class="t-vi">Hãy trò chuyện.</span></h2>
+<p><span class="t-en">Open to supplier-quality and manufacturing-quality roles in the US and with multinationals in Vietnam. In English or Vietnamese — either works.</span><span class="t-vi">Sẵn sàng cho các vị trí chất lượng nhà cung cấp và chất lượng sản xuất tại Hoa Kỳ cũng như với các tập đoàn đa quốc gia tại Việt Nam. Bằng tiếng Anh hay tiếng Việt — đều được.</span></p>
+</div>
+<div class="foot-links">
+<a href="https://www.linkedin.com/in/jonathanle1227/" rel="noopener" target="_blank"><span class="lbl">LinkedIn</span> /in/jonathanle1227</a>
+<a href="mailto:jdle1227@gmail.com"><span class="lbl">Email</span> jdle1227@gmail.com</a>
+<a download="" href="Jonathan_Le_Resume.pdf"><span class="lbl"><span class="t-en">Résumé</span><span class="t-vi">CV</span></span><span class="t-en"> Download PDF</span><span class="t-vi">Tải PDF</span></a>
+</div>
+</div>
+<div class="foot-bottom">
+<span>© <span id="year"><span class="t-en"></span><span class="t-vi">Xây dựng &amp; lưu trữ trên GitHub Pages</span></span> Jonathan Le · Minneapolis, MN</span>
+<span>Built &amp; hosted on GitHub Pages</span>
+</div>
+</div>
 </footer>
-
 <script>
 (function(){
-  // year
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // mobile nav
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', function(){
-    var open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
-  });
-
-  // accordion
-  document.querySelectorAll('.role-head').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var role = btn.closest('.role');
-      var open = role.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-    });
-  });
-
-  // recognition filter
-  var filters = document.getElementById('filters');
-  var cards = Array.prototype.slice.call(document.querySelectorAll('#recGrid .rec'));
-  filters.addEventListener('click', function(e){
-    var b = e.target.closest('.filter'); if(!b) return;
-    filters.querySelectorAll('.filter').forEach(function(f){f.classList.remove('active')});
-    b.classList.add('active');
-    var cat = b.getAttribute('data-cat');
-    cards.forEach(function(card){
-      var show = cat === 'all' || card.getAttribute('data-cat').indexOf(cat) > -1;
-      card.style.display = show ? '' : 'none';
-    });
-  });
-
-  // language toggle
-  var langToggle = document.getElementById('langToggle');
-  langToggle.addEventListener('click', function(e){
-    var b = e.target.closest('button'); if(!b) return;
-    var lang = b.getAttribute('data-lang');
-    langToggle.querySelectorAll('button').forEach(function(x){x.classList.toggle('active', x===b)});
-    document.querySelectorAll('.vn-narrative [data-lang]').forEach(function(block){
-      block.classList.toggle('show', block.getAttribute('data-lang')===lang);
-    });
-  });
-
-  // reveal on scroll
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var reveals = document.querySelectorAll('.reveal');
-  if(reduce || !('IntersectionObserver' in window)){
-    reveals.forEach(function(r){r.classList.add('in')});
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
-    }, {threshold:.12});
+  var navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+  navToggle.addEventListener('click',function(){var o=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',o);});
+  navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open');navToggle.setAttribute('aria-expanded','false');});});
+  document.querySelectorAll('.role-head').forEach(function(btn){btn.addEventListener('click',function(){var r=btn.closest('.role');var o=r.classList.toggle('open');btn.setAttribute('aria-expanded',o);});});
+  var filters=document.getElementById('filters');
+  var cards=[].slice.call(document.querySelectorAll('#recGrid .rec'));
+  filters.addEventListener('click',function(e){var b=e.target.closest('.filter');if(!b)return;filters.querySelectorAll('.filter').forEach(function(f){f.classList.remove('active')});b.classList.add('active');var cat=b.getAttribute('data-cat');cards.forEach(function(card){var show=cat==='all'||card.getAttribute('data-cat').indexOf(cat)>-1;card.style.display=show?'':'none';});});
+  var pageLang=document.getElementById('pageLang');
+  function setLang(lang){document.documentElement.classList.toggle('lang-vi',lang==='vi');document.documentElement.lang=lang;pageLang.querySelectorAll('button').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-setlang')===lang);});}
+  pageLang.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;setLang(b.getAttribute('data-setlang'));});
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){reveals.forEach(function(r){r.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
     reveals.forEach(function(r){io.observe(r)});
-
-    // count-up readouts
     document.querySelectorAll('.num[data-count]').forEach(function(el){
-      var target = +el.getAttribute('data-count');
-      var suffix = el.getAttribute('data-suffix') || '';
-      var cio = new IntersectionObserver(function(ents){
-        ents.forEach(function(en){
-          if(!en.isIntersecting) return;
-          cio.unobserve(el);
-          var start=0, dur=900, t0=performance.now();
-          function step(now){
-            var p=Math.min((now-t0)/dur,1);
-            var val=Math.round((0.5-Math.cos(p*Math.PI)/2)*target);
-            el.textContent=val+suffix;
-            if(p<1) requestAnimationFrame(step);
-          }
-          requestAnimationFrame(step);
-        });
-      },{threshold:.5});
-      cio.observe(el);
+      var target=+el.getAttribute('data-count');var suffix=el.getAttribute('data-suffix')||'';
+      var cio=new IntersectionObserver(function(ents){ents.forEach(function(en){if(!en.isIntersecting)return;cio.unobserve(el);var t0=performance.now();function step(now){var p=Math.min((now-t0)/900,1);var val=Math.round((0.5-Math.cos(p*Math.PI)/2)*target);el.textContent=val+suffix;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});},{threshold:.5});cio.observe(el);
     });
   }
 })();
